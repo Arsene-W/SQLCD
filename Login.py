@@ -1,5 +1,7 @@
 import pymssql
+import sys
 
+from PyQt5.QtWidgets import QApplication, QMainWindow
 from PyQt5 import QtCore, QtGui, QtWidgets
 from ui_Login import Ui_MainWindow
 from Register import RegisterForm
@@ -40,4 +42,5 @@ class LoginForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
     def reclick(self):
         if self.cur:
             self.re.SetSql(self.conn,self.cur)
-            self.re.show()
+            self.re.exec_()
+

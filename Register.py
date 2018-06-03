@@ -1,9 +1,8 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-from ui_Register import Ui_MainWindow
+from ui_Register import Ui_Dialog
 
-
-class RegisterForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面类继承
+class RegisterForm(Ui_Dialog,QtWidgets.QDialog):#从自动生成的界面类继承
 
     def __init__(self, parent = None):
 
@@ -25,6 +24,7 @@ class RegisterForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界�
         sql="INSERT INTO accounts VALUES(%s,%s,%s) "
         self.cur.execute(sql,(self.lineEdit.text(),self.lineEdit_2.text(),type))
         self.conn.commit()
+        self.close()
 
     def SetSql(self,conn,cur):
         self.conn=conn
