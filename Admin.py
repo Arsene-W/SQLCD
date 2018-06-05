@@ -50,6 +50,7 @@ class AdminForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
         self.setLayout(dlgLayout)
 
     def showall(self):
+        self.model.removeRows(0, self.model.rowCount())
         sql = "SELECT * FROM owner"
         self.cur.execute(sql)
         rows = self.cur.fetchall()
@@ -62,15 +63,19 @@ class AdminForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
 
 
     def addorcor(self,item):
+        print(self.num)
         if item.row()>=self.num:
-            self.num=self.num+1
+            self.num = self.num + 1
             sql="INSERT INTO owner(owner_num) VALUES (%s)"
             try:
                 self.cur.execute(sql,item.text())
             except:
-                QMessageBox.critical(self, '错误', '输入有误')
+                print(self.num)
+                QMessageBox.critical(self, '错误', '输入有误，主码可能重复')
                 self.model.setItem(item.row(), item.column(), QStandardItem(self.temp))
+                self.num = self.num - 1
                 return
+
 
         else:
             key=self.model.item(item.row(),0).text()
@@ -79,7 +84,7 @@ class AdminForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
                 try:
                     self.cur.execute(sql, (str(item.text()), self.temp))
                 except:
-                    QMessageBox.critical(self, '错误', '输入有误')
+                    QMessageBox.critical(self, '错误', '输入有误，主码可能重复')
                     self.model.setItem(item.row(), item.column(), QStandardItem(self.temp))
                     return
             else:
@@ -87,7 +92,7 @@ class AdminForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
                 try:
                     self.cur.execute(sql,(str(item.text()),str(key)))
                 except:
-                    QMessageBox.critical(self, '错误', '输入有误')
+                    QMessageBox.critical(self, '错误', '输入有误，主码可能重复')
                     self.model.setItem(item.row(), item.column(), QStandardItem(self.temp))
                     return
         self.conn.commit()

@@ -22,8 +22,11 @@ class RegisterForm(Ui_Dialog,QtWidgets.QDialog):#从自动生成的界面类继�
         else:
             type=2
         sql="INSERT INTO accounts VALUES(%s,%s,%s) "
-        self.cur.execute(sql,(self.lineEdit.text(),self.lineEdit_2.text(),type))
-        self.conn.commit()
+        try:
+            self.cur.execute(sql,(self.lineEdit.text(),self.lineEdit_2.text(),type))
+            self.conn.commit()
+        except:
+            QtWidgets.QMessageBox.critical(self,'错误','注册失败，用户名可能重复')
         self.close()
 
     def SetSql(self,conn,cur):
