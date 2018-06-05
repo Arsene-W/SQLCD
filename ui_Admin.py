@@ -38,6 +38,9 @@ class Ui_MainWindow(object):
         self.tableView = QtWidgets.QTableView(self.centralwidget)
         self.tableView.setGeometry(QtCore.QRect(50, 70, 431, 501))
         self.tableView.setObjectName("tableView")
+        self.pushButton_5 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_5.setGeometry(QtCore.QRect(390, 30, 75, 23))
+        self.pushButton_5.setObjectName("pushButton_5")
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
@@ -54,4 +57,5 @@ class Ui_MainWindow(object):
         self.pushButton_2.setText(_translate("MainWindow", "删除"))
         self.pushButton_3.setText(_translate("MainWindow", "修改"))
         self.pushButton_4.setText(_translate("MainWindow", "查询"))
+        self.pushButton_5.setText(_translate("MainWindow", "上传"))
 
