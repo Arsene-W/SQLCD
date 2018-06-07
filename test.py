@@ -1,12 +1,13 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 import sys
-from Admin import AdminForm
+from  Register import RegisterForm
+from Owner import OwnerForm
 
 from PyQt5.QtWidgets import QApplication, QMainWindow
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    main = AdminForm()
+    main = OwnerForm('11')
     main.show()
     sys.exit(app.exec_())

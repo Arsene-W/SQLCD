@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(400, 300)
+        Dialog.resize(400, 360)
         self.lineEdit_2 = QtWidgets.QLineEdit(Dialog)
         self.lineEdit_2.setGeometry(QtCore.QRect(200, 190, 113, 20))
         self.lineEdit_2.setEchoMode(QtWidgets.QLineEdit.Password)
@@ -34,7 +34,7 @@ class Ui_Dialog(object):
         self.radioButton_2.setChecked(True)
         self.radioButton_2.setObjectName("radioButton_2")
         self.pushButton = QtWidgets.QPushButton(Dialog)
-        self.pushButton.setGeometry(QtCore.QRect(150, 240, 75, 23))
+        self.pushButton.setGeometry(QtCore.QRect(160, 310, 75, 23))
         self.pushButton.setObjectName("pushButton")
         self.label_2 = QtWidgets.QLabel(Dialog)
         self.label_2.setGeometry(QtCore.QRect(100, 130, 54, 12))
@@ -42,13 +42,20 @@ class Ui_Dialog(object):
         self.label_3 = QtWidgets.QLabel(Dialog)
         self.label_3.setGeometry(QtCore.QRect(100, 190, 54, 12))
         self.label_3.setObjectName("label_3")
+        self.label_4 = QtWidgets.QLabel(Dialog)
+        self.label_4.setGeometry(QtCore.QRect(100, 250, 54, 12))
+        self.label_4.setObjectName("label_4")
+        self.lineEdit_3 = QtWidgets.QLineEdit(Dialog)
+        self.lineEdit_3.setEnabled(True)
+        self.lineEdit_3.setGeometry(QtCore.QRect(200, 250, 113, 20))
+        self.lineEdit_3.setObjectName("lineEdit_3")
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
-        Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
+        Dialog.setWindowTitle(_translate("Dialog", "注   册"))
         self.radioButton_3.setText(_translate("Dialog", "物业代表"))
         self.radioButton.setText(_translate("Dialog", "管理员"))
         self.label.setText(_translate("Dialog", "注册"))
@@ -56,4 +63,5 @@ class Ui_Dialog(object):
         self.pushButton.setText(_translate("Dialog", "注册"))
         self.label_2.setText(_translate("Dialog", "账号"))
         self.label_3.setText(_translate("Dialog", "密码"))
+        self.label_4.setText(_translate("Dialog", "业主号"))
 

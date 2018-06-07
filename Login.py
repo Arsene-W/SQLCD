@@ -6,6 +6,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from ui_Login import Ui_MainWindow
 from Register import RegisterForm
 from Admin import AdminForm
+from Owner import OwnerForm
 
 #数据库服务器信息
 server='DESKTOP-9J11AF2'
@@ -30,17 +31,22 @@ class LoginForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
     def loclick(self):
         account=self.lineEdit.text()
         password=self.lineEdit_2.text()
-        sql = "SELECT type FROM accounts WHERE account=%s AND password=%s"
+        sql = "SELECT type,own_num FROM accounts WHERE account=%s AND password=%s"
         self.cur.execute(sql,(account,password))
         ty = self.cur.fetchall()
         if len(ty)>0:
             if ty[0][0][0]=='1':
-                print("yes")
-                print(ty[0][0])
                 self.close()
                 self.ad=AdminForm()
                 self.ad.show()
                 self.conn.close()
+            elif ty[0][0][0]=='2':
+                self.close()
+                print(ty[0][1])
+                self.ow=OwnerForm(ty[0][1])
+                self.ow.show()
+                self.conn.close()
+
         else:
             QtWidgets.QMessageBox.warning(self, '错误', '用户名或密码有误，请重新输入')
 
