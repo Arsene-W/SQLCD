@@ -19,7 +19,7 @@ class AdminForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
         super(AdminForm, self).__init__()
         self.setupUi(self)
 
-        self.conn = pymssql.connect(server, user, password, database, charset="GBK")
+        self.conn = pymssql.connect(server, user, password, database, charset="utf8")
         self.cur = self.conn.cursor()
         self.init()
         self.num=self.model.rowCount()

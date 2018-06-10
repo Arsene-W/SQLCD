@@ -3,11 +3,12 @@
 import sys
 from  Register import RegisterForm
 from Owner import OwnerForm
+from Representative import RepresentativeForm
 
 from PyQt5.QtWidgets import QApplication, QMainWindow
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    main = OwnerForm('11')
+    main = RepresentativeForm()
     main.show()
     sys.exit(app.exec_())

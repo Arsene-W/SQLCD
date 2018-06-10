@@ -7,6 +7,7 @@ from ui_Login import Ui_MainWindow
 from Register import RegisterForm
 from Admin import AdminForm
 from Owner import OwnerForm
+from Representative import RepresentativeForm
 
 #数据库服务器信息
 server='DESKTOP-9J11AF2'
@@ -21,7 +22,7 @@ class LoginForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
         self.setupUi(self)
 
 
-        self.conn = pymssql.connect(server, user, password, database, charset="GBK")
+        self.conn = pymssql.connect(server, user, password, database, charset="utf8")
         self.cur = self.conn.cursor()
 
         self.pushButton.clicked.connect(self.loclick)
@@ -42,9 +43,14 @@ class LoginForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
                 self.conn.close()
             elif ty[0][0][0]=='2':
                 self.close()
-                print(ty[0][1])
                 self.ow=OwnerForm(ty[0][1])
                 self.ow.show()
+                self.conn.close()
+
+            elif ty[0][0][0]=='3':
+                self.close()
+                self.re=RepresentativeForm()
+                self.re.show()
                 self.conn.close()
 
         else:

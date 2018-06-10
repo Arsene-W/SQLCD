@@ -36,24 +36,26 @@ class RegisterForm(Ui_Dialog,QtWidgets.QDialog):#从自动生成的界面类继�
             sql="SELECT * FROM owner WHERE owner_num=%s"
             self.cur.execute(sql,self.lineEdit_3.text())
             tf = self.cur.fetchall()
-            if len(tf)>0:
-                sql="INSERT INTO accounts VALUES(%s,%s,%s,%s) "
-                try:
-                    self.cur.execute(sql,(self.lineEdit.text(),self.lineEdit_2.text(),type,self.lineEdit_3.text()))
-                    self.conn.commit()
-                except:
-                    QtWidgets.QMessageBox.critical(self,'错误','注册失败，用户名可能重复')
-            else:
-                QtWidgets.QMessageBox.warning(self, '错误', '未找到该业主号，请向管理员询问')
+            # if len(tf)>0:
+            sql="INSERT INTO accounts VALUES(%s,%s,%s,%s) "
+            try:
+                self.cur.execute(sql,(self.lineEdit.text(),self.lineEdit_2.text(),type,self.lineEdit_3.text()))
+                self.conn.commit()
+                self.close()
+            except:
+                QtWidgets.QMessageBox.critical(self,'错误','注册失败，用户名可能重复或业主号输入错误')
+            # else:
+            #     QtWidgets.QMessageBox.warning(self, '错误', '未找到该业主号，请向管理员询问')
         else:
             sql = "INSERT INTO accounts(account,password,type) VALUES(%s,%s,%s) "
             try:
                 self.cur.execute(sql, (self.lineEdit.text(), self.lineEdit_2.text(), type))
                 self.conn.commit()
+                self.close()
             except:
                 QtWidgets.QMessageBox.critical(self, '错误', '注册失败，用户名可能重复')
 
-        self.close()
+
 
     def SetSql(self,conn,cur):
         self.conn=conn
