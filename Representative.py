@@ -78,51 +78,71 @@ class RepresentativeForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成�
         self.model.appendRow([])
 
     def addorcor(self,item):
+        text = item.text()
         if self.tablenum==0:
             #print(self.num)
             if item.row()>=self.num:
                 self.num = self.num + 1
                 sql="INSERT INTO charges(month,owner_num) VALUES (%s,%s)"
                 try:
-                    self.cur.execute(sql,(self.comboBox.currentText(),item.text()))
+                    self.cur.execute(sql, (self.comboBox.currentText(), "待填"))
                 except:
                     QMessageBox.critical(self, '错误', '输入有误，可能该业主号不存在')
                     self.model.setItem(item.row(), item.column(), QStandardItem(self.temp))
                     self.num = self.num - 1
                     return
+
+            if self.model.item(item.row(), 0) != None:
+                if item.column() != 0:
+                    key = self.model.item(item.row(), 0).text()
+                else:
+                    if self.temp != None:
+                        key = self.temp
+                    else:
+                        key = "待填"
             else:
-                key=self.model.item(item.row(),0).text()
+                key = "待填"
 
-                if item.column()==1:
-                    sql = "UPDATE charges SET water_yield=%s ,water_charges=%s WHERE month=%s AND owner_num=%s"
-                    try:
-                        print(str(item.text()),str(float(item.text())*float(self.doubleSpinBox.text())),str(self.comboBox.currentText()),str(key))
-                        self.cur.execute(sql,(str(item.text()),str(float(item.text())*float(self.doubleSpinBox.text())),str(self.comboBox.currentText()),str(key)))
-                        self.model.setItem(item.row(),2,QStandardItem(str(float(item.text())*float(self.doubleSpinBox.text()))))
-                    except:
-                        QMessageBox.critical(self, '错误', '输入有误，主码可能重复')
-                        self.model.setItem(item.row(), item.column(), QStandardItem(self.temp))
-                        return
+            if item.column() == 0:
 
-                elif item.column()==3:
-                    sql = "UPDATE charges SET electricity_yield=%s ,electricity_charges=%s WHERE month=%s AND owner_num=%s"
-                    try:
-                        print(str(item.text()),str(float(item.text())*float(self.doubleSpinBox_2.text())),str(self.comboBox.currentText()),str(key))
-                        self.cur.execute(sql,(str(item.text()),str(float(item.text())*float(self.doubleSpinBox.text())),str(self.comboBox.currentText()),str(key)))
-                        self.model.setItem(item.row(),4,QStandardItem(str(float(item.text())*float(self.doubleSpinBox_2.text()))))
-                    except:
-                        QMessageBox.critical(self, '错误', '输入有误，主码可能重复')
-                        self.model.setItem(item.row(), item.column(), QStandardItem(self.temp))
-                        return
+                sql = "UPDATE charges SET owner_num=%s WHERE owner_num=%s"
+                try:
 
-                elif item.column()==5:
-                    sql = "UPDATE charges SET property_fee=%s WHERE owner_num=%s"
-                    try:
-                        self.cur.execute(sql, (str(item.text()), key))
-                    except:
-                        QMessageBox.critical(self, '错误', '输入有误，主码可能重复')
-                        self.model.setItem(item.row(), item.column(), QStandardItem(self.temp))
-                        return
+                    self.cur.execute(sql, (str(text), key))
+                except:
+                    QMessageBox.critical(self, '错误', '输入有误，主码可能重复0')
+                    self.model.setItem(item.row(), item.column(), QStandardItem(self.temp))
+                    return
+            elif item.column()==1:
+                sql = "UPDATE charges SET water_yield=%s ,water_charges=%s WHERE month=%s AND owner_num=%s"
+                try:
+                    print(str(item.text()),str(float(item.text())*float(self.doubleSpinBox.text())),str(self.comboBox.currentText()),str(key))
+                    self.cur.execute(sql,(str(item.text()),str(float(item.text())*float(self.doubleSpinBox.text())),str(self.comboBox.currentText()),str(key)))
+                    self.model.setItem(item.row(),2,QStandardItem(str(float(item.text())*float(self.doubleSpinBox.text()))))
+                except:
+                    QMessageBox.critical(self, '错误', '输入有误，主码可能重复')
+                    self.model.setItem(item.row(), item.column(), QStandardItem(self.temp))
+                    return
+
+            elif item.column()==3:
+                sql = "UPDATE charges SET electricity_yield=%s ,electricity_charges=%s WHERE month=%s AND owner_num=%s"
+                try:
+                    print(str(item.text()),str(float(item.text())*float(self.doubleSpinBox_2.text())),str(self.comboBox.currentText()),str(key))
+                    self.cur.execute(sql,(str(item.text()),str(float(item.text())*float(self.doubleSpinBox.text())),str(self.comboBox.currentText()),str(key)))
+                    self.model.setItem(item.row(),4,QStandardItem(str(float(item.text())*float(self.doubleSpinBox_2.text()))))
+                except:
+                    QMessageBox.critical(self, '错误', '输入有误，主码可能重复')
+                    self.model.setItem(item.row(), item.column(), QStandardItem(self.temp))
+                    return
+
+            elif item.column()==5:
+                sql = "UPDATE charges SET property_fee=%s WHERE owner_num=%s"
+                try:
+                    self.cur.execute(sql, (str(item.text()), key))
+                except:
+                    QMessageBox.critical(self, '错误', '输入有误，主码可能重复')
+                    self.model.setItem(item.row(), item.column(), QStandardItem(self.temp))
+                    return
 
 
 

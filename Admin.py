@@ -82,11 +82,13 @@ class AdminForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
 
 
         if self.model.item(item.row(), 0)!=None:
-            key = self.model.item(item.row(), 0).text()
-            if self.temp!=None:
-                key=self.temp
+            if item.column()!=0:
+                key = self.model.item(item.row(), 0).text()
             else:
-                key="待填"
+                if self.temp!=None:
+                    key=self.temp
+                else:
+                    key="待填"
         else:
             key="待填"
 
