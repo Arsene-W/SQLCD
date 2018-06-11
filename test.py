@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 import sys
+from Admin import AdminForm
 from  Register import RegisterForm
 from Owner import OwnerForm
 from Representative import RepresentativeForm

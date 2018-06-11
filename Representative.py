@@ -70,7 +70,7 @@ class RepresentativeForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成�
         for i in range(row):
             date = []
             for j in range(col):
-                item = QStandardItem(rows[i][j])
+                item = QStandardItem(str(rows[i][j]))
                 date.append(item)
             self.model.appendRow(date)
 
@@ -220,8 +220,3 @@ class RepresentativeForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成�
 
 
 
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    main = RepresentativeForm()
-    main.show()
-    sys.exit(app.exec_())

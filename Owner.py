@@ -10,9 +10,9 @@ user="owner"
 password="123456"
 database="SQLCD"
 
-own_title=['业主号','业主名']
+own_title=['业主号','业主名','房间号','电话']
 serif_title=['月份','服务号','服务名','业主号','费用','服务人员','状态']
-cha_title=['月份','业主号','业主名','水费','电费','物业费','物业维修费']
+cha_title=['月份','业主号','水费','电费','物业费','物业维修费']
 class OwnerForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面类继承
 
     def __init__(self, my_num,parent = None):
@@ -82,11 +82,12 @@ class OwnerForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
         self.tablenum=1
         self.model.itemChanged.connect(self.cor)
 
+
     def showcha(self):
         self.model.clear()
         self.model = QStandardItemModel(0, len(cha_title))
         self.model.setHorizontalHeaderLabels(cha_title)
-        sql = "SELECT month,owner_num,owner_name,water_charges,electricity_charges,property_fee,repair_cost FROM charges WHERE owner_num=%s"
+        sql = "SELECT month,owner_num,water_charges,electricity_charges,property_fee,repair_cost FROM charges WHERE owner_num=%s"
         self.cur.execute(sql,self.my_num)
         rows = self.cur.fetchall()
         self.addItem(rows, cha_title)
@@ -106,7 +107,7 @@ class OwnerForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
         for i in range(row):
             date = []
             for j in range(col):
-                item = QStandardItem(rows[i][j])
+                item = QStandardItem(str(rows[i][j]))
                 date.append(item)
             self.model.appendRow(date)
 
