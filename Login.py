@@ -30,7 +30,7 @@ class LoginForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
         self.pushButton_2.clicked.connect(self.reclick)
 
 
-    def loclick(self):
+    def loclick(self):                   #登录点击事件
         account=self.lineEdit.text()
         password=self.lineEdit_2.text()
         sql = "SELECT type,own_num FROM accounts WHERE account=%s AND password=%s"
@@ -63,7 +63,7 @@ class LoginForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
         else:
             QtWidgets.QMessageBox.warning(self, '错误', '用户名或密码有误，请重新输入')
 
-    def reclick(self):
+    def reclick(self):                #注册点击事件
         self.re = RegisterForm()
         if self.cur:
             self.re.SetSql(self.conn,self.cur)

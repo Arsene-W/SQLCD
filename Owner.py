@@ -43,7 +43,7 @@ class OwnerForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
         self.showper()
 
 
-
+#展示个人信息
     def showper(self):
         self.model.clear()
         self.model = QStandardItemModel(0, len(own_title));
@@ -62,7 +62,7 @@ class OwnerForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
 
         self.tablenum=0
 
-
+#展示服务信息
     def showserif(self):
         self.model.clear()
         self.model = QStandardItemModel(0, len(serif_title));
@@ -82,7 +82,7 @@ class OwnerForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
         self.tablenum=1
         self.model.itemChanged.connect(self.cor)
 
-
+#展示账单
     def showcha(self):
         self.model.clear()
         self.model = QStandardItemModel(0, len(cha_title))
@@ -100,6 +100,8 @@ class OwnerForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
         self.setLayout(dlgLayout)
 
         self.tablenum=2
+
+#添加项目
     def addItem(self, rows,title):
         row = len(rows)
         col = len(title)
@@ -111,6 +113,7 @@ class OwnerForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
                 date.append(item)
             self.model.appendRow(date)
 
+#获取服务
     def getser(self):
         sql="SELECT service_name FROM service"
         self.cur.execute(sql)
@@ -118,6 +121,7 @@ class OwnerForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
         print(rows)
         return rows
 
+#添加服务
     def addSer(self):
         try:
             sql="SELECT service_num FROM service WHERE service_name=%s"
@@ -131,9 +135,11 @@ class OwnerForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
         except:
             QMessageBox.critical(self,"错误","添加失败，可能您已添加过次服务")
 
+#获取修改前的值
     def gettemp(self,item):
         self.temp=item.data()
 
+#修改
     def cor(self,item):
         key = [self.model.item(item.row(), 0).text(), self.model.item(item.row(), 1).text(),self.model.item(item.row(), 3).text()]
         if item.column()==6:

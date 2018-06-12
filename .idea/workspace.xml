@@ -11,7 +11,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/sql$Login.coverage" NAME="Login Coverage Results" MODIFIED="1528192893431" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/sql$main.coverage" NAME="main Coverage Results" MODIFIED="1528772990688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/sql$main.coverage" NAME="main Coverage Results" MODIFIED="1528773695836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/sql$python_server_1_.coverage" NAME="python_server(1) Coverage Results" MODIFIED="1528694997650" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
     <SUITE FILE_PATH="coverage/sql$Register.coverage" NAME="Register Coverage Results" MODIFIED="1528360728062" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/sql$python_server.coverage" NAME="python_server Coverage Results" MODIFIED="1528623777688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
@@ -23,16 +23,16 @@
       <file leaf-file-name="Register.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Register.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="49" column="78" lean-forward="true" selection-start-line="49" selection-start-column="78" selection-end-line="49" selection-end-column="78" />
+            <state relative-caret-position="342">
+              <caret line="61" column="6" lean-forward="false" selection-start-line="61" selection-start-column="6" selection-end-line="61" selection-end-column="6" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
-                <marker date="1528772617530" expanded="true" signature="1003:1041" ph="SELECT * FRO... owner" />
-                <marker date="1528772617530" expanded="true" signature="1182:1209" ph="INSERT into accounts... " />
-                <marker date="1528772617530" expanded="true" signature="1182:1222" ph="INSERT INTO accounts... " />
-                <marker date="1528772617530" expanded="true" signature="1188:1209" ph="insert into accounts... " />
-                <marker date="1528772617530" expanded="true" signature="1651:1711" ph="INSERT INTO accounts... " />
-                <marker date="1528772617530" expanded="true" signature="1694:1711" ph="INSERT INTO accounts... " />
+                <marker date="1528773695693" expanded="true" signature="1018:1056" ph="SELECT * FRO... owner" />
+                <marker date="1528773695693" expanded="true" signature="1197:1224" ph="INSERT into accounts... " />
+                <marker date="1528773695693" expanded="true" signature="1197:1237" ph="INSERT INTO accounts... " />
+                <marker date="1528773695693" expanded="true" signature="1203:1224" ph="insert into accounts... " />
+                <marker date="1528773695693" expanded="true" signature="1666:1726" ph="INSERT INTO accounts... " />
+                <marker date="1528773695693" expanded="true" signature="1709:1726" ph="INSERT INTO accounts... " />
               </folding>
             </state>
           </provider>
@@ -41,24 +41,12 @@
       <file leaf-file-name="Login.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Login.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="51" column="28" lean-forward="true" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
+            <state relative-caret-position="304">
+              <caret line="65" column="45" lean-forward="false" selection-start-line="65" selection-start-column="45" selection-end-line="65" selection-end-column="45" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
-                <marker date="1528772467615" expanded="true" signature="956:1022" ph="SELECT * fro... accounts" />
-                <marker date="1528772467615" expanded="true" signature="962:1022" ph="select * fro... accounts" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-              <folding>
-                <element signature="e#45#55#0" expanded="true" />
+                <marker date="1528773695742" expanded="true" signature="982:1048" ph="SELECT * fro... accounts" />
+                <marker date="1528773695742" expanded="true" signature="988:1048" ph="select * fro... accounts" />
               </folding>
             </state>
           </provider>
@@ -67,21 +55,21 @@
       <file leaf-file-name="Owner.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Owner.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1482">
-              <caret line="51" column="41" lean-forward="true" selection-start-line="51" selection-start-column="41" selection-end-line="51" selection-end-column="41" />
+            <state relative-caret-position="-171">
+              <caret line="141" column="3" lean-forward="false" selection-start-line="141" selection-start-column="3" selection-end-line="141" selection-end-column="3" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
-                <marker date="1528678743543" expanded="true" signature="1497:1535" ph="SELECT * FRO... owner" />
-                <marker date="1528678743543" expanded="true" signature="2251:2275" ph="SELECT * FRO... service_if" />
-                <marker date="1528678743543" expanded="true" signature="3025:3112" ph="SELECT * FRO... service_if" />
-                <marker date="1528678743543" expanded="true" signature="3025:3138" ph="SELECT * FRO... charges" />
-                <marker date="1528678743543" expanded="true" signature="4017:4049" ph="SELECT * FRO... WHERE" />
-                <marker date="1528678743543" expanded="true" signature="4209:4262" ph="SELECT servi... service" />
-                <marker date="1528678743543" expanded="true" signature="4384:4482" ph="INSERT INTO service_if... " />
-                <marker date="1528678743543" expanded="true" signature="5037:5122" ph="UPDATE servi... " />
-                <marker date="1528678743543" expanded="true" signature="5338:5401" ph="SELECT repai... charges" />
-                <marker date="1528678743543" expanded="true" signature="5616:5681" ph="UPDATE charg... " />
-                <marker date="1528678743543" expanded="true" signature="5930:5995" ph="UPDATE charg... " />
+                <marker date="1528774022595" expanded="true" signature="1504:1542" ph="SELECT * FRO... owner" />
+                <marker date="1528774022595" expanded="true" signature="2265:2289" ph="SELECT * FRO... service_if" />
+                <marker date="1528774022595" expanded="true" signature="3044:3131" ph="SELECT * FRO... service_if" />
+                <marker date="1528774022595" expanded="true" signature="3044:3157" ph="SELECT * FRO... charges" />
+                <marker date="1528774022595" expanded="true" signature="4049:4081" ph="SELECT * FRO... WHERE" />
+                <marker date="1528774022595" expanded="true" signature="4247:4300" ph="SELECT servi... service" />
+                <marker date="1528774022595" expanded="true" signature="4422:4520" ph="INSERT INTO service_if... " />
+                <marker date="1528774022595" expanded="true" signature="5088:5173" ph="UPDATE servi... " />
+                <marker date="1528774022595" expanded="true" signature="5389:5452" ph="SELECT repai... charges" />
+                <marker date="1528774022595" expanded="true" signature="5667:5732" ph="UPDATE charg... " />
+                <marker date="1528774022595" expanded="true" signature="5981:6046" ph="UPDATE charg... " />
               </folding>
             </state>
           </provider>
@@ -90,9 +78,11 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="34" lean-forward="true" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-              <folding />
+            <state relative-caret-position="228">
+              <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+              <folding>
+                <element signature="e#46#56#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -100,24 +90,34 @@
       <file leaf-file-name="Admin.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="138" column="0" lean-forward="true" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
+            <state relative-caret-position="247">
+              <caret line="163" column="6" lean-forward="false" selection-start-line="163" selection-start-column="6" selection-end-line="163" selection-end-column="6" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
-                <marker date="1528764821615" expanded="true" signature="1633:1652" ph="SELECT * FRO... owner" />
-                <marker date="1528764821615" expanded="true" signature="1952:1992" ph="INSERT INTO owner... " />
-                <marker date="1528764821615" expanded="true" signature="2693:2741" ph="UPDATE owner... " />
-                <marker date="1528764821615" expanded="true" signature="3085:3132" ph="UPDATE owner... " />
-                <marker date="1528764821615" expanded="true" signature="3085:3134" ph="UPDATE owner... " />
-                <marker date="1528764821615" expanded="true" signature="3482:3529" ph="UPDATE owner... " />
-                <marker date="1528764821615" expanded="true" signature="3879:3922" ph="UPDATE owner... " />
-                <marker date="1528764821615" expanded="true" signature="4849:4885" ph="DELETE FROM " />
-                <marker date="1528764821615" expanded="true" signature="5206:5220" ph="SELECT * FRO... OWNER" />
-                <marker date="1528764821615" expanded="true" signature="5206:5225" ph="SELECT * FRO... owner" />
-                <marker date="1528764821615" expanded="true" signature="5206:5231" ph="SELECT * FRO... owner" />
-                <marker date="1528764821615" expanded="true" signature="5206:5242" ph="SELECT * FRO... owner" />
-                <marker date="1528764821615" expanded="true" signature="5206:5244" ph="SELECT * FRO... owner" />
+                <marker date="1528773695783" expanded="true" signature="1647:1666" ph="SELECT * FRO... owner" />
+                <marker date="1528773695783" expanded="true" signature="1980:2020" ph="INSERT INTO owner... " />
+                <marker date="1528773695783" expanded="true" signature="2743:2791" ph="UPDATE owner... " />
+                <marker date="1528773695783" expanded="true" signature="3135:3182" ph="UPDATE owner... " />
+                <marker date="1528773695783" expanded="true" signature="3135:3184" ph="UPDATE owner... " />
+                <marker date="1528773695783" expanded="true" signature="3532:3579" ph="UPDATE owner... " />
+                <marker date="1528773695783" expanded="true" signature="3929:3972" ph="UPDATE owner... " />
+                <marker date="1528773695783" expanded="true" signature="4914:4950" ph="DELETE FROM " />
+                <marker date="1528773695783" expanded="true" signature="5277:5291" ph="SELECT * FRO... OWNER" />
+                <marker date="1528773695783" expanded="true" signature="5277:5296" ph="SELECT * FRO... owner" />
+                <marker date="1528773695783" expanded="true" signature="5277:5302" ph="SELECT * FRO... owner" />
+                <marker date="1528773695783" expanded="true" signature="5277:5313" ph="SELECT * FRO... owner" />
+                <marker date="1528773695783" expanded="true" signature="5277:5315" ph="SELECT * FRO... owner" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ui_wRepresentative.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ui_wRepresentative.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="43" lean-forward="true" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -127,10 +127,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="247">
               <caret line="13" column="31" lean-forward="false" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
-              <folding>
-                <marker date="1528772549336" expanded="true" signature="295:721" ph="..." />
-                <marker date="1528772549336" expanded="true" signature="3418:3421" ph="..." />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -148,19 +145,19 @@
       <file leaf-file-name="wRepresentative.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wRepresentative.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="159" column="2" lean-forward="false" selection-start-line="159" selection-start-column="2" selection-end-line="159" selection-end-column="2" />
+            <state relative-caret-position="171">
+              <caret line="198" column="3" lean-forward="false" selection-start-line="198" selection-start-column="3" selection-end-line="198" selection-end-column="3" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
-                <marker date="1528773025024" expanded="true" signature="1382:1477" ph="SELECT owner... charges" />
-                <marker date="1528773025024" expanded="true" signature="2792:2843" ph="INSERT INTO charges... " />
-                <marker date="1528773025024" expanded="true" signature="3632:3682" ph="UPDATE charg... " />
-                <marker date="1528773025024" expanded="true" signature="4036:4119" ph="UPDATE charg... " />
-                <marker date="1528773025024" expanded="true" signature="4842:4895" ph="UPDATE charg... " />
-                <marker date="1528773025024" expanded="true" signature="5505:5585" ph="UPDATE servi... " />
-                <marker date="1528773025024" expanded="true" signature="5963:6049" ph="UPDATE servi... " />
-                <marker date="1528773025024" expanded="true" signature="6678:6702" ph="SELECT * FRO... service_if" />
-                <marker date="1528773025024" expanded="true" signature="7719:7792" ph="DELETE FROM " />
+                <marker date="1528774022495" expanded="true" signature="1388:1483" ph="SELECT owner... charges" />
+                <marker date="1528774022495" expanded="true" signature="2816:2867" ph="INSERT INTO charges... " />
+                <marker date="1528774022495" expanded="true" signature="3656:3706" ph="UPDATE charg... " />
+                <marker date="1528774022495" expanded="true" signature="4060:4143" ph="UPDATE charg... " />
+                <marker date="1528774022495" expanded="true" signature="4866:4919" ph="UPDATE charg... " />
+                <marker date="1528774022495" expanded="true" signature="5529:5609" ph="UPDATE servi... " />
+                <marker date="1528774022495" expanded="true" signature="5987:6073" ph="UPDATE servi... " />
+                <marker date="1528774022495" expanded="true" signature="6715:6739" ph="SELECT * FRO... service_if" />
+                <marker date="1528774022495" expanded="true" signature="7760:7833" ph="DELETE FROM " />
               </folding>
             </state>
           </provider>
@@ -169,19 +166,19 @@
       <file leaf-file-name="eRepresentative.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/eRepresentative.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="47" column="32" lean-forward="false" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
+            <state relative-caret-position="290">
+              <caret line="191" column="53" lean-forward="true" selection-start-line="191" selection-start-column="53" selection-end-line="191" selection-end-column="53" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
-                <marker date="1528772831446" expanded="true" signature="1382:1489" ph="SELECT owner... charges" />
-                <marker date="1528772831446" expanded="true" signature="2804:2855" ph="INSERT INTO charges... " />
-                <marker date="1528772831446" expanded="true" signature="3644:3694" ph="UPDATE charg... " />
-                <marker date="1528772831446" expanded="true" signature="4048:4143" ph="UPDATE charg... " />
-                <marker date="1528772831446" expanded="true" signature="4866:4919" ph="UPDATE charg... " />
-                <marker date="1528772831446" expanded="true" signature="5529:5609" ph="UPDATE servi... " />
-                <marker date="1528772831446" expanded="true" signature="5987:6073" ph="UPDATE servi... " />
-                <marker date="1528772831446" expanded="true" signature="8270:8294" ph="SELECT * FRO... service_if" />
-                <marker date="1528772831446" expanded="true" signature="9311:9384" ph="DELETE FROM " />
+                <marker date="1528774022656" expanded="true" signature="1388:1495" ph="SELECT owner... charges" />
+                <marker date="1528774022656" expanded="true" signature="2828:2879" ph="INSERT INTO charges... " />
+                <marker date="1528774022656" expanded="true" signature="3668:3718" ph="UPDATE charg... " />
+                <marker date="1528774022656" expanded="true" signature="4072:4167" ph="UPDATE charg... " />
+                <marker date="1528774022656" expanded="true" signature="4890:4943" ph="UPDATE charg... " />
+                <marker date="1528774022656" expanded="true" signature="5553:5633" ph="UPDATE servi... " />
+                <marker date="1528774022656" expanded="true" signature="6011:6097" ph="UPDATE servi... " />
+                <marker date="1528774022656" expanded="true" signature="6739:6763" ph="SELECT * FRO... service_if" />
+                <marker date="1528774022656" expanded="true" signature="7784:7857" ph="DELETE FROM " />
               </folding>
             </state>
           </provider>
@@ -211,14 +208,14 @@
         <option value="$PROJECT_DIR$/ui_Register.py" />
         <option value="$PROJECT_DIR$/ui_Representative.py" />
         <option value="$PROJECT_DIR$/../python_server.py" />
-        <option value="$PROJECT_DIR$/Owner.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/../python_server(1).py" />
         <option value="$PROJECT_DIR$/Representative.py" />
         <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/Admin.py" />
+        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/Login.py" />
         <option value="$PROJECT_DIR$/Register.py" />
+        <option value="$PROJECT_DIR$/Admin.py" />
+        <option value="$PROJECT_DIR$/Owner.py" />
         <option value="$PROJECT_DIR$/eRepresentative.py" />
         <option value="$PROJECT_DIR$/wRepresentative.py" />
       </list>
@@ -231,7 +228,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="343" />
+    <option name="x" value="484" />
     <option name="y" value="46" />
     <option name="width" value="1400" />
     <option name="height" value="976" />
@@ -406,7 +403,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="343" y="46" width="1400" height="976" extended-state="0" />
+    <frame x="484" y="46" width="1400" height="976" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -415,7 +412,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32482597" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32482597" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -464,13 +461,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../python_server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="40" lean-forward="false" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../python_server(1).py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
@@ -484,19 +474,19 @@
           <caret line="71" column="87" lean-forward="false" selection-start-line="71" selection-start-column="87" selection-end-line="71" selection-end-column="87" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
-            <marker date="1528764821615" expanded="true" signature="1633:1652" ph="SELECT * FRO... owner" />
-            <marker date="1528764821615" expanded="true" signature="1952:1992" ph="INSERT INTO owner... " />
-            <marker date="1528764821615" expanded="true" signature="2693:2741" ph="UPDATE owner... " />
-            <marker date="1528764821615" expanded="true" signature="3085:3132" ph="UPDATE owner... " />
-            <marker date="1528764821615" expanded="true" signature="3085:3134" ph="UPDATE owner... " />
-            <marker date="1528764821615" expanded="true" signature="3482:3529" ph="UPDATE owner... " />
-            <marker date="1528764821615" expanded="true" signature="3879:3922" ph="UPDATE owner... " />
-            <marker date="1528764821615" expanded="true" signature="4849:4885" ph="DELETE FROM " />
-            <marker date="1528764821615" expanded="true" signature="5206:5220" ph="SELECT * FRO... OWNER" />
-            <marker date="1528764821615" expanded="true" signature="5206:5225" ph="SELECT * FRO... owner" />
-            <marker date="1528764821615" expanded="true" signature="5206:5231" ph="SELECT * FRO... owner" />
-            <marker date="1528764821615" expanded="true" signature="5206:5242" ph="SELECT * FRO... owner" />
-            <marker date="1528764821615" expanded="true" signature="5206:5244" ph="SELECT * FRO... owner" />
+            <marker date="1528773695783" expanded="true" signature="1647:1666" ph="SELECT * FRO... owner" />
+            <marker date="1528773695783" expanded="true" signature="1980:2020" ph="INSERT INTO owner... " />
+            <marker date="1528773695783" expanded="true" signature="2743:2791" ph="UPDATE owner... " />
+            <marker date="1528773695783" expanded="true" signature="3135:3182" ph="UPDATE owner... " />
+            <marker date="1528773695783" expanded="true" signature="3135:3184" ph="UPDATE owner... " />
+            <marker date="1528773695783" expanded="true" signature="3532:3579" ph="UPDATE owner... " />
+            <marker date="1528773695783" expanded="true" signature="3929:3972" ph="UPDATE owner... " />
+            <marker date="1528773695783" expanded="true" signature="4914:4950" ph="DELETE FROM " />
+            <marker date="1528773695783" expanded="true" signature="5277:5291" ph="SELECT * FRO... OWNER" />
+            <marker date="1528773695783" expanded="true" signature="5277:5296" ph="SELECT * FRO... owner" />
+            <marker date="1528773695783" expanded="true" signature="5277:5302" ph="SELECT * FRO... owner" />
+            <marker date="1528773695783" expanded="true" signature="5277:5313" ph="SELECT * FRO... owner" />
+            <marker date="1528773695783" expanded="true" signature="5277:5315" ph="SELECT * FRO... owner" />
           </folding>
         </state>
       </provider>
@@ -507,12 +497,12 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
-            <marker date="1528772617530" expanded="true" signature="1003:1041" ph="SELECT * FRO... owner" />
-            <marker date="1528772617530" expanded="true" signature="1182:1209" ph="INSERT into accounts... " />
-            <marker date="1528772617530" expanded="true" signature="1182:1222" ph="INSERT INTO accounts... " />
-            <marker date="1528772617530" expanded="true" signature="1188:1209" ph="insert into accounts... " />
-            <marker date="1528772617530" expanded="true" signature="1651:1711" ph="INSERT INTO accounts... " />
-            <marker date="1528772617530" expanded="true" signature="1694:1711" ph="INSERT INTO accounts... " />
+            <marker date="1528773695693" expanded="true" signature="1018:1056" ph="SELECT * FRO... owner" />
+            <marker date="1528773695693" expanded="true" signature="1197:1224" ph="INSERT into accounts... " />
+            <marker date="1528773695693" expanded="true" signature="1197:1237" ph="INSERT INTO accounts... " />
+            <marker date="1528773695693" expanded="true" signature="1203:1224" ph="insert into accounts... " />
+            <marker date="1528773695693" expanded="true" signature="1666:1726" ph="INSERT INTO accounts... " />
+            <marker date="1528773695693" expanded="true" signature="1709:1726" ph="INSERT INTO accounts... " />
           </folding>
         </state>
       </provider>
@@ -544,8 +534,8 @@
           <caret line="5" column="34" lean-forward="true" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <marker date="1528772467615" expanded="true" signature="956:1022" ph="SELECT * fro... accounts" />
-            <marker date="1528772467615" expanded="true" signature="962:1022" ph="select * fro... accounts" />
+            <marker date="1528773695742" expanded="true" signature="982:1048" ph="SELECT * fro... accounts" />
+            <marker date="1528773695742" expanded="true" signature="988:1048" ph="select * fro... accounts" />
           </folding>
         </state>
       </provider>
@@ -580,19 +570,19 @@
           <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
-            <marker date="1528764821615" expanded="true" signature="1633:1652" ph="SELECT * FRO... owner" />
-            <marker date="1528764821615" expanded="true" signature="1952:1992" ph="INSERT INTO owner... " />
-            <marker date="1528764821615" expanded="true" signature="2693:2741" ph="UPDATE owner... " />
-            <marker date="1528764821615" expanded="true" signature="3085:3132" ph="UPDATE owner... " />
-            <marker date="1528764821615" expanded="true" signature="3085:3134" ph="UPDATE owner... " />
-            <marker date="1528764821615" expanded="true" signature="3482:3529" ph="UPDATE owner... " />
-            <marker date="1528764821615" expanded="true" signature="3879:3922" ph="UPDATE owner... " />
-            <marker date="1528764821615" expanded="true" signature="4849:4885" ph="DELETE FROM " />
-            <marker date="1528764821615" expanded="true" signature="5206:5220" ph="SELECT * FRO... OWNER" />
-            <marker date="1528764821615" expanded="true" signature="5206:5225" ph="SELECT * FRO... owner" />
-            <marker date="1528764821615" expanded="true" signature="5206:5231" ph="SELECT * FRO... owner" />
-            <marker date="1528764821615" expanded="true" signature="5206:5242" ph="SELECT * FRO... owner" />
-            <marker date="1528764821615" expanded="true" signature="5206:5244" ph="SELECT * FRO... owner" />
+            <marker date="1528773695783" expanded="true" signature="1647:1666" ph="SELECT * FRO... owner" />
+            <marker date="1528773695783" expanded="true" signature="1980:2020" ph="INSERT INTO owner... " />
+            <marker date="1528773695783" expanded="true" signature="2743:2791" ph="UPDATE owner... " />
+            <marker date="1528773695783" expanded="true" signature="3135:3182" ph="UPDATE owner... " />
+            <marker date="1528773695783" expanded="true" signature="3135:3184" ph="UPDATE owner... " />
+            <marker date="1528773695783" expanded="true" signature="3532:3579" ph="UPDATE owner... " />
+            <marker date="1528773695783" expanded="true" signature="3929:3972" ph="UPDATE owner... " />
+            <marker date="1528773695783" expanded="true" signature="4914:4950" ph="DELETE FROM " />
+            <marker date="1528773695783" expanded="true" signature="5277:5291" ph="SELECT * FRO... OWNER" />
+            <marker date="1528773695783" expanded="true" signature="5277:5296" ph="SELECT * FRO... owner" />
+            <marker date="1528773695783" expanded="true" signature="5277:5302" ph="SELECT * FRO... owner" />
+            <marker date="1528773695783" expanded="true" signature="5277:5313" ph="SELECT * FRO... owner" />
+            <marker date="1528773695783" expanded="true" signature="5277:5315" ph="SELECT * FRO... owner" />
           </folding>
         </state>
       </provider>
@@ -603,12 +593,12 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
-            <marker date="1528772617530" expanded="true" signature="1003:1041" ph="SELECT * FRO... owner" />
-            <marker date="1528772617530" expanded="true" signature="1182:1209" ph="INSERT into accounts... " />
-            <marker date="1528772617530" expanded="true" signature="1182:1222" ph="INSERT INTO accounts... " />
-            <marker date="1528772617530" expanded="true" signature="1188:1209" ph="insert into accounts... " />
-            <marker date="1528772617530" expanded="true" signature="1651:1711" ph="INSERT INTO accounts... " />
-            <marker date="1528772617530" expanded="true" signature="1694:1711" ph="INSERT INTO accounts... " />
+            <marker date="1528773695693" expanded="true" signature="1018:1056" ph="SELECT * FRO... owner" />
+            <marker date="1528773695693" expanded="true" signature="1197:1224" ph="INSERT into accounts... " />
+            <marker date="1528773695693" expanded="true" signature="1197:1237" ph="INSERT INTO accounts... " />
+            <marker date="1528773695693" expanded="true" signature="1203:1224" ph="insert into accounts... " />
+            <marker date="1528773695693" expanded="true" signature="1666:1726" ph="INSERT INTO accounts... " />
+            <marker date="1528773695693" expanded="true" signature="1709:1726" ph="INSERT INTO accounts... " />
           </folding>
         </state>
       </provider>
@@ -633,8 +623,8 @@
           <caret line="42" column="20" lean-forward="true" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <marker date="1528772467615" expanded="true" signature="956:1022" ph="SELECT * fro... accounts" />
-            <marker date="1528772467615" expanded="true" signature="962:1022" ph="select * fro... accounts" />
+            <marker date="1528773695742" expanded="true" signature="982:1048" ph="SELECT * fro... accounts" />
+            <marker date="1528773695742" expanded="true" signature="988:1048" ph="select * fro... accounts" />
           </folding>
         </state>
       </provider>
@@ -659,12 +649,12 @@
           <caret line="26" column="26" lean-forward="false" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
-            <marker date="1528772617530" expanded="true" signature="1003:1041" ph="SELECT * FRO... owner" />
-            <marker date="1528772617530" expanded="true" signature="1182:1209" ph="INSERT into accounts... " />
-            <marker date="1528772617530" expanded="true" signature="1182:1222" ph="INSERT INTO accounts... " />
-            <marker date="1528772617530" expanded="true" signature="1188:1209" ph="insert into accounts... " />
-            <marker date="1528772617530" expanded="true" signature="1651:1711" ph="INSERT INTO accounts... " />
-            <marker date="1528772617530" expanded="true" signature="1694:1711" ph="INSERT INTO accounts... " />
+            <marker date="1528773695693" expanded="true" signature="1018:1056" ph="SELECT * FRO... owner" />
+            <marker date="1528773695693" expanded="true" signature="1197:1224" ph="INSERT into accounts... " />
+            <marker date="1528773695693" expanded="true" signature="1197:1237" ph="INSERT INTO accounts... " />
+            <marker date="1528773695693" expanded="true" signature="1203:1224" ph="insert into accounts... " />
+            <marker date="1528773695693" expanded="true" signature="1666:1726" ph="INSERT INTO accounts... " />
+            <marker date="1528773695693" expanded="true" signature="1709:1726" ph="INSERT INTO accounts... " />
           </folding>
         </state>
       </provider>
@@ -696,8 +686,8 @@
           <caret line="32" column="25" lean-forward="true" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <marker date="1528772467615" expanded="true" signature="956:1022" ph="SELECT * fro... accounts" />
-            <marker date="1528772467615" expanded="true" signature="962:1022" ph="select * fro... accounts" />
+            <marker date="1528773695742" expanded="true" signature="982:1048" ph="SELECT * fro... accounts" />
+            <marker date="1528773695742" expanded="true" signature="988:1048" ph="select * fro... accounts" />
           </folding>
         </state>
       </provider>
@@ -708,8 +698,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <marker date="1528772467615" expanded="true" signature="956:1022" ph="SELECT * fro... accounts" />
-            <marker date="1528772467615" expanded="true" signature="962:1022" ph="select * fro... accounts" />
+            <marker date="1528773695742" expanded="true" signature="982:1048" ph="SELECT * fro... accounts" />
+            <marker date="1528773695742" expanded="true" signature="988:1048" ph="select * fro... accounts" />
           </folding>
         </state>
       </provider>
@@ -720,12 +710,12 @@
           <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
-            <marker date="1528772617530" expanded="true" signature="1003:1041" ph="SELECT * FRO... owner" />
-            <marker date="1528772617530" expanded="true" signature="1182:1209" ph="INSERT into accounts... " />
-            <marker date="1528772617530" expanded="true" signature="1182:1222" ph="INSERT INTO accounts... " />
-            <marker date="1528772617530" expanded="true" signature="1188:1209" ph="insert into accounts... " />
-            <marker date="1528772617530" expanded="true" signature="1651:1711" ph="INSERT INTO accounts... " />
-            <marker date="1528772617530" expanded="true" signature="1694:1711" ph="INSERT INTO accounts... " />
+            <marker date="1528773695693" expanded="true" signature="1018:1056" ph="SELECT * FRO... owner" />
+            <marker date="1528773695693" expanded="true" signature="1197:1224" ph="INSERT into accounts... " />
+            <marker date="1528773695693" expanded="true" signature="1197:1237" ph="INSERT INTO accounts... " />
+            <marker date="1528773695693" expanded="true" signature="1203:1224" ph="insert into accounts... " />
+            <marker date="1528773695693" expanded="true" signature="1666:1726" ph="INSERT INTO accounts... " />
+            <marker date="1528773695693" expanded="true" signature="1709:1726" ph="INSERT INTO accounts... " />
           </folding>
         </state>
       </provider>
@@ -758,8 +748,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <marker date="1528772467615" expanded="true" signature="956:1022" ph="SELECT * fro... accounts" />
-            <marker date="1528772467615" expanded="true" signature="962:1022" ph="select * fro... accounts" />
+            <marker date="1528773695742" expanded="true" signature="982:1048" ph="SELECT * fro... accounts" />
+            <marker date="1528773695742" expanded="true" signature="988:1048" ph="select * fro... accounts" />
           </folding>
         </state>
       </provider>
@@ -856,69 +846,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Owner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1482">
-          <caret line="51" column="41" lean-forward="true" selection-start-line="51" selection-start-column="41" selection-end-line="51" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-            <marker date="1528678743543" expanded="true" signature="1497:1535" ph="SELECT * FRO... owner" />
-            <marker date="1528678743543" expanded="true" signature="2251:2275" ph="SELECT * FRO... service_if" />
-            <marker date="1528678743543" expanded="true" signature="3025:3112" ph="SELECT * FRO... service_if" />
-            <marker date="1528678743543" expanded="true" signature="3025:3138" ph="SELECT * FRO... charges" />
-            <marker date="1528678743543" expanded="true" signature="4017:4049" ph="SELECT * FRO... WHERE" />
-            <marker date="1528678743543" expanded="true" signature="4209:4262" ph="SELECT servi... service" />
-            <marker date="1528678743543" expanded="true" signature="4384:4482" ph="INSERT INTO service_if... " />
-            <marker date="1528678743543" expanded="true" signature="5037:5122" ph="UPDATE servi... " />
-            <marker date="1528678743543" expanded="true" signature="5338:5401" ph="SELECT repai... charges" />
-            <marker date="1528678743543" expanded="true" signature="5616:5681" ph="UPDATE charg... " />
-            <marker date="1528678743543" expanded="true" signature="5930:5995" ph="UPDATE charg... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="34" lean-forward="true" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui_Register.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="31" lean-forward="false" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
-          <folding>
-            <marker date="1528772549336" expanded="true" signature="295:721" ph="..." />
-            <marker date="1528772549336" expanded="true" signature="3418:3421" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="138" column="0" lean-forward="true" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-            <marker date="1528764821615" expanded="true" signature="1633:1652" ph="SELECT * FRO... owner" />
-            <marker date="1528764821615" expanded="true" signature="1952:1992" ph="INSERT INTO owner... " />
-            <marker date="1528764821615" expanded="true" signature="2693:2741" ph="UPDATE owner... " />
-            <marker date="1528764821615" expanded="true" signature="3085:3132" ph="UPDATE owner... " />
-            <marker date="1528764821615" expanded="true" signature="3085:3134" ph="UPDATE owner... " />
-            <marker date="1528764821615" expanded="true" signature="3482:3529" ph="UPDATE owner... " />
-            <marker date="1528764821615" expanded="true" signature="3879:3922" ph="UPDATE owner... " />
-            <marker date="1528764821615" expanded="true" signature="4849:4885" ph="DELETE FROM " />
-            <marker date="1528764821615" expanded="true" signature="5206:5220" ph="SELECT * FRO... OWNER" />
-            <marker date="1528764821615" expanded="true" signature="5206:5225" ph="SELECT * FRO... owner" />
-            <marker date="1528764821615" expanded="true" signature="5206:5231" ph="SELECT * FRO... owner" />
-            <marker date="1528764821615" expanded="true" signature="5206:5242" ph="SELECT * FRO... owner" />
-            <marker date="1528764821615" expanded="true" signature="5206:5244" ph="SELECT * FRO... owner" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Representative.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="931">
@@ -935,68 +862,138 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Login.py">
+    <entry file="file://$PROJECT_DIR$/ui_wRepresentative.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="43" lean-forward="true" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
-          <caret line="51" column="28" lean-forward="true" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
+          <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+          <folding>
+            <element signature="e#46#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="65" column="45" lean-forward="false" selection-start-line="65" selection-start-column="45" selection-end-line="65" selection-end-column="45" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <marker date="1528772467615" expanded="true" signature="956:1022" ph="SELECT * fro... accounts" />
-            <marker date="1528772467615" expanded="true" signature="962:1022" ph="select * fro... accounts" />
+            <marker date="1528773695742" expanded="true" signature="982:1048" ph="SELECT * fro... accounts" />
+            <marker date="1528773695742" expanded="true" signature="988:1048" ph="select * fro... accounts" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Register.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="49" column="78" lean-forward="true" selection-start-line="49" selection-start-column="78" selection-end-line="49" selection-end-column="78" />
+        <state relative-caret-position="342">
+          <caret line="61" column="6" lean-forward="false" selection-start-line="61" selection-start-column="6" selection-end-line="61" selection-end-column="6" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
-            <marker date="1528772617530" expanded="true" signature="1003:1041" ph="SELECT * FRO... owner" />
-            <marker date="1528772617530" expanded="true" signature="1182:1209" ph="INSERT into accounts... " />
-            <marker date="1528772617530" expanded="true" signature="1182:1222" ph="INSERT INTO accounts... " />
-            <marker date="1528772617530" expanded="true" signature="1188:1209" ph="insert into accounts... " />
-            <marker date="1528772617530" expanded="true" signature="1651:1711" ph="INSERT INTO accounts... " />
-            <marker date="1528772617530" expanded="true" signature="1694:1711" ph="INSERT INTO accounts... " />
+            <marker date="1528773695693" expanded="true" signature="1018:1056" ph="SELECT * FRO... owner" />
+            <marker date="1528773695693" expanded="true" signature="1197:1224" ph="INSERT into accounts... " />
+            <marker date="1528773695693" expanded="true" signature="1197:1237" ph="INSERT INTO accounts... " />
+            <marker date="1528773695693" expanded="true" signature="1203:1224" ph="insert into accounts... " />
+            <marker date="1528773695693" expanded="true" signature="1666:1726" ph="INSERT INTO accounts... " />
+            <marker date="1528773695693" expanded="true" signature="1709:1726" ph="INSERT INTO accounts... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="163" column="6" lean-forward="false" selection-start-line="163" selection-start-column="6" selection-end-line="163" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+            <marker date="1528773695783" expanded="true" signature="1647:1666" ph="SELECT * FRO... owner" />
+            <marker date="1528773695783" expanded="true" signature="1980:2020" ph="INSERT INTO owner... " />
+            <marker date="1528773695783" expanded="true" signature="2743:2791" ph="UPDATE owner... " />
+            <marker date="1528773695783" expanded="true" signature="3135:3182" ph="UPDATE owner... " />
+            <marker date="1528773695783" expanded="true" signature="3135:3184" ph="UPDATE owner... " />
+            <marker date="1528773695783" expanded="true" signature="3532:3579" ph="UPDATE owner... " />
+            <marker date="1528773695783" expanded="true" signature="3929:3972" ph="UPDATE owner... " />
+            <marker date="1528773695783" expanded="true" signature="4914:4950" ph="DELETE FROM " />
+            <marker date="1528773695783" expanded="true" signature="5277:5291" ph="SELECT * FRO... OWNER" />
+            <marker date="1528773695783" expanded="true" signature="5277:5296" ph="SELECT * FRO... owner" />
+            <marker date="1528773695783" expanded="true" signature="5277:5302" ph="SELECT * FRO... owner" />
+            <marker date="1528773695783" expanded="true" signature="5277:5313" ph="SELECT * FRO... owner" />
+            <marker date="1528773695783" expanded="true" signature="5277:5315" ph="SELECT * FRO... owner" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui_Register.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="31" lean-forward="false" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Owner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-171">
+          <caret line="141" column="3" lean-forward="false" selection-start-line="141" selection-start-column="3" selection-end-line="141" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+            <marker date="1528774022595" expanded="true" signature="1504:1542" ph="SELECT * FRO... owner" />
+            <marker date="1528774022595" expanded="true" signature="2265:2289" ph="SELECT * FRO... service_if" />
+            <marker date="1528774022595" expanded="true" signature="3044:3131" ph="SELECT * FRO... service_if" />
+            <marker date="1528774022595" expanded="true" signature="3044:3157" ph="SELECT * FRO... charges" />
+            <marker date="1528774022595" expanded="true" signature="4049:4081" ph="SELECT * FRO... WHERE" />
+            <marker date="1528774022595" expanded="true" signature="4247:4300" ph="SELECT servi... service" />
+            <marker date="1528774022595" expanded="true" signature="4422:4520" ph="INSERT INTO service_if... " />
+            <marker date="1528774022595" expanded="true" signature="5088:5173" ph="UPDATE servi... " />
+            <marker date="1528774022595" expanded="true" signature="5389:5452" ph="SELECT repai... charges" />
+            <marker date="1528774022595" expanded="true" signature="5667:5732" ph="UPDATE charg... " />
+            <marker date="1528774022595" expanded="true" signature="5981:6046" ph="UPDATE charg... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/eRepresentative.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="47" column="32" lean-forward="false" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
+        <state relative-caret-position="290">
+          <caret line="191" column="53" lean-forward="true" selection-start-line="191" selection-start-column="53" selection-end-line="191" selection-end-column="53" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
-            <marker date="1528772831446" expanded="true" signature="1382:1489" ph="SELECT owner... charges" />
-            <marker date="1528772831446" expanded="true" signature="2804:2855" ph="INSERT INTO charges... " />
-            <marker date="1528772831446" expanded="true" signature="3644:3694" ph="UPDATE charg... " />
-            <marker date="1528772831446" expanded="true" signature="4048:4143" ph="UPDATE charg... " />
-            <marker date="1528772831446" expanded="true" signature="4866:4919" ph="UPDATE charg... " />
-            <marker date="1528772831446" expanded="true" signature="5529:5609" ph="UPDATE servi... " />
-            <marker date="1528772831446" expanded="true" signature="5987:6073" ph="UPDATE servi... " />
-            <marker date="1528772831446" expanded="true" signature="8270:8294" ph="SELECT * FRO... service_if" />
-            <marker date="1528772831446" expanded="true" signature="9311:9384" ph="DELETE FROM " />
+            <marker date="1528774022656" expanded="true" signature="1388:1495" ph="SELECT owner... charges" />
+            <marker date="1528774022656" expanded="true" signature="2828:2879" ph="INSERT INTO charges... " />
+            <marker date="1528774022656" expanded="true" signature="3668:3718" ph="UPDATE charg... " />
+            <marker date="1528774022656" expanded="true" signature="4072:4167" ph="UPDATE charg... " />
+            <marker date="1528774022656" expanded="true" signature="4890:4943" ph="UPDATE charg... " />
+            <marker date="1528774022656" expanded="true" signature="5553:5633" ph="UPDATE servi... " />
+            <marker date="1528774022656" expanded="true" signature="6011:6097" ph="UPDATE servi... " />
+            <marker date="1528774022656" expanded="true" signature="6739:6763" ph="SELECT * FRO... service_if" />
+            <marker date="1528774022656" expanded="true" signature="7784:7857" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wRepresentative.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="159" column="2" lean-forward="false" selection-start-line="159" selection-start-column="2" selection-end-line="159" selection-end-column="2" />
+        <state relative-caret-position="171">
+          <caret line="198" column="3" lean-forward="false" selection-start-line="198" selection-start-column="3" selection-end-line="198" selection-end-column="3" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
-            <marker date="1528773025024" expanded="true" signature="1382:1477" ph="SELECT owner... charges" />
-            <marker date="1528773025024" expanded="true" signature="2792:2843" ph="INSERT INTO charges... " />
-            <marker date="1528773025024" expanded="true" signature="3632:3682" ph="UPDATE charg... " />
-            <marker date="1528773025024" expanded="true" signature="4036:4119" ph="UPDATE charg... " />
-            <marker date="1528773025024" expanded="true" signature="4842:4895" ph="UPDATE charg... " />
-            <marker date="1528773025024" expanded="true" signature="5505:5585" ph="UPDATE servi... " />
-            <marker date="1528773025024" expanded="true" signature="5963:6049" ph="UPDATE servi... " />
-            <marker date="1528773025024" expanded="true" signature="6678:6702" ph="SELECT * FRO... service_if" />
-            <marker date="1528773025024" expanded="true" signature="7719:7792" ph="DELETE FROM " />
+            <marker date="1528774022495" expanded="true" signature="1388:1483" ph="SELECT owner... charges" />
+            <marker date="1528774022495" expanded="true" signature="2816:2867" ph="INSERT INTO charges... " />
+            <marker date="1528774022495" expanded="true" signature="3656:3706" ph="UPDATE charg... " />
+            <marker date="1528774022495" expanded="true" signature="4060:4143" ph="UPDATE charg... " />
+            <marker date="1528774022495" expanded="true" signature="4866:4919" ph="UPDATE charg... " />
+            <marker date="1528774022495" expanded="true" signature="5529:5609" ph="UPDATE servi... " />
+            <marker date="1528774022495" expanded="true" signature="5987:6073" ph="UPDATE servi... " />
+            <marker date="1528774022495" expanded="true" signature="6715:6739" ph="SELECT * FRO... service_if" />
+            <marker date="1528774022495" expanded="true" signature="7760:7833" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>

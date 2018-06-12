@@ -36,7 +36,7 @@ class AdminForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
 
 
 
-
+#初始化界面
     def init(self):
         self.model = QStandardItemModel(0, len(title));
         self.model.setHorizontalHeaderLabels(title)
@@ -49,6 +49,7 @@ class AdminForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
         dlgLayout.addWidget(self.tableView)
         self.setLayout(dlgLayout)
 
+#展示业主信息
     def showall(self):
         self.model.removeRows(0, self.model.rowCount())
         sql = "SELECT * FROM owner"
@@ -57,12 +58,12 @@ class AdminForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
 
         self.addItem(rows)
 
-
+#获取修改前的值
     def gettemp(self,item):
         self.temp=item.data()
 
 
-
+#添加或修改
     def addorcor(self,item):
 
         text=item.text()
@@ -80,7 +81,7 @@ class AdminForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
                 self.num = self.num - 1
                 return
 
-
+#是否为主键，是否第一次修改的关键逻辑，核心
         if self.model.item(item.row(), 0)!=None:
             if item.column()!=0:
                 key = self.model.item(item.row(), 0).text()
@@ -133,11 +134,11 @@ class AdminForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
         self.conn.commit()
         #print(item.row(),item.column(),item.text())
 
-
+#加入新行
     def addRow(self):
         self.model.appendRow([])
 
-
+#添加表项
     def addItem(self,rows):
         row=len(rows)
         col=len(title)
@@ -148,7 +149,7 @@ class AdminForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
                 date.append(item)
             self.model.appendRow(date)
 
-
+#删除某行
     def delete(self):
         indexs = self.tableView.selectionModel().selection().indexes()
         if len(indexs) > 0:
@@ -160,7 +161,7 @@ class AdminForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
             self.model.removeRows(index.row(), 1)
         self.num = self.model.rowCount()
 
-
+#搜索于业主
     def select(self):
         self.model.removeRows(0,self.model.rowCount())
         text=str(self.lineEdit.text())

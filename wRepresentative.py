@@ -41,6 +41,7 @@ class wRepresentativeForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成�
         self.model = QStandardItemModel(0, len(charges_title))
         self.showcha()
 
+#展示账单
     def showcha(self):
         self.model.clear()
         self.model = QStandardItemModel(0, len(charges_title));
@@ -63,6 +64,7 @@ class wRepresentativeForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成�
         self.pushButton_3.setEnabled(False)
         self.pushButton.setEnabled(True)
 
+#添加表项
     def addItem(self, rows,title):
         row = len(rows)
         col = len(title)
@@ -74,9 +76,11 @@ class wRepresentativeForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成�
                 date.append(item)
             self.model.appendRow(date)
 
+#添加行
     def addRow(self):
         self.model.appendRow([])
 
+#添加或修改
     def addorcor(self,item):
         text = item.text()
         if self.tablenum==0:
@@ -157,15 +161,16 @@ class wRepresentativeForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成�
                     QMessageBox.critical(self, '错误', '输入有误，主码可能重复')
                     self.model.setItem(item.row(), item.column(), QStandardItem(self.temp))
                     return
-  
+
 
             self.conn.commit()
 
 
-
+#获取修改前值
     def gettemp(self,item):
         self.temp=item.data()
 
+#展示服务信息
     def showserif(self):
         self.model.clear()
         self.model = QStandardItemModel(0, len(serviceif_title));
@@ -191,6 +196,7 @@ class wRepresentativeForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成�
         self.pushButton.setEnabled(False)
         self.pushButton_3.setEnabled(True)
 
+#删除
     def delete(self):
         indexs = self.tableView.selectionModel().selection().indexes()
         if len(indexs) > 0:

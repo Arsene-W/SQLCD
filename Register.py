@@ -17,6 +17,7 @@ class RegisterForm(Ui_Dialog,QtWidgets.QDialog):#从自动生成的界面类继�
         self.radioButton.clicked.connect(self.unlineEdit_3)
         self.radioButton_3.clicked.connect(self.unlineEdit_3)
 
+#控制业主框是否可编辑
     def enlineEdit_3(self,check):
         self.lineEdit_3.setEnabled(check)
 
@@ -24,7 +25,7 @@ class RegisterForm(Ui_Dialog,QtWidgets.QDialog):#从自动生成的界面类继�
         check= not check
         self.lineEdit_3.setEnabled(check)
 
-
+#注册
     def register(self):
         if self.radioButton.isChecked():
             type=1
@@ -58,7 +59,7 @@ class RegisterForm(Ui_Dialog,QtWidgets.QDialog):#从自动生成的界面类继�
                 QtWidgets.QMessageBox.critical(self, '错误', '注册失败，用户名可能重复')
 
 
-
+#载入数据库
     def SetSql(self,conn,cur):
         self.conn=conn
         self.cur=cur
