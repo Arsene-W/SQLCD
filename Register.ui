@@ -29,20 +29,20 @@
   <widget class="QRadioButton" name="radioButton_3">
    <property name="geometry">
     <rect>
-     <x>270</x>
+     <x>210</x>
      <y>80</y>
      <width>89</width>
      <height>16</height>
     </rect>
    </property>
    <property name="text">
-    <string>物业代表</string>
+    <string>水费代表</string>
    </property>
   </widget>
   <widget class="QRadioButton" name="radioButton">
    <property name="geometry">
     <rect>
-     <x>50</x>
+     <x>120</x>
      <y>80</y>
      <width>89</width>
      <height>16</height>
@@ -81,7 +81,7 @@
   <widget class="QRadioButton" name="radioButton_2">
    <property name="geometry">
     <rect>
-     <x>170</x>
+     <x>40</x>
      <y>80</y>
      <width>89</width>
      <height>16</height>
@@ -157,6 +157,19 @@
      <width>113</width>
      <height>20</height>
     </rect>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="radioButton_4">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>80</y>
+     <width>89</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>电费代表</string>
    </property>
   </widget>
  </widget>

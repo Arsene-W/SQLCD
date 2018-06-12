@@ -17,10 +17,10 @@ class Ui_Dialog(object):
         self.lineEdit_2.setEchoMode(QtWidgets.QLineEdit.Password)
         self.lineEdit_2.setObjectName("lineEdit_2")
         self.radioButton_3 = QtWidgets.QRadioButton(Dialog)
-        self.radioButton_3.setGeometry(QtCore.QRect(270, 80, 89, 16))
+        self.radioButton_3.setGeometry(QtCore.QRect(210, 80, 89, 16))
         self.radioButton_3.setObjectName("radioButton_3")
         self.radioButton = QtWidgets.QRadioButton(Dialog)
-        self.radioButton.setGeometry(QtCore.QRect(50, 80, 89, 16))
+        self.radioButton.setGeometry(QtCore.QRect(120, 80, 89, 16))
         self.radioButton.setObjectName("radioButton")
         self.label = QtWidgets.QLabel(Dialog)
         self.label.setGeometry(QtCore.QRect(180, 30, 51, 31))
@@ -30,7 +30,7 @@ class Ui_Dialog(object):
         self.lineEdit.setGeometry(QtCore.QRect(200, 130, 113, 20))
         self.lineEdit.setObjectName("lineEdit")
         self.radioButton_2 = QtWidgets.QRadioButton(Dialog)
-        self.radioButton_2.setGeometry(QtCore.QRect(170, 80, 89, 16))
+        self.radioButton_2.setGeometry(QtCore.QRect(40, 80, 89, 16))
         self.radioButton_2.setChecked(True)
         self.radioButton_2.setObjectName("radioButton_2")
         self.pushButton = QtWidgets.QPushButton(Dialog)
@@ -49,6 +49,9 @@ class Ui_Dialog(object):
         self.lineEdit_3.setEnabled(True)
         self.lineEdit_3.setGeometry(QtCore.QRect(200, 250, 113, 20))
         self.lineEdit_3.setObjectName("lineEdit_3")
+        self.radioButton_4 = QtWidgets.QRadioButton(Dialog)
+        self.radioButton_4.setGeometry(QtCore.QRect(310, 80, 89, 16))
+        self.radioButton_4.setObjectName("radioButton_4")
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
@@ -56,7 +59,7 @@ class Ui_Dialog(object):
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "注   册"))
-        self.radioButton_3.setText(_translate("Dialog", "物业代表"))
+        self.radioButton_3.setText(_translate("Dialog", "水费代表"))
         self.radioButton.setText(_translate("Dialog", "管理员"))
         self.label.setText(_translate("Dialog", "注册"))
         self.radioButton_2.setText(_translate("Dialog", "业主"))
@@ -64,4 +67,5 @@ class Ui_Dialog(object):
         self.label_2.setText(_translate("Dialog", "账号"))
         self.label_3.setText(_translate("Dialog", "密码"))
         self.label_4.setText(_translate("Dialog", "业主号"))
+        self.radioButton_4.setText(_translate("Dialog", "电费代表"))
 

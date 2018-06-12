@@ -6,12 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>726</width>
-    <height>612</height>
+    <width>1057</width>
+    <height>818</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>物业管理系统-物业代表</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">font: 11pt &quot;黑体&quot;;</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="label">
@@ -27,7 +30,7 @@
      <string notr="true">font: 14pt &quot;黑体&quot;;</string>
     </property>
     <property name="text">
-     <string>普通业主</string>
+     <string>电费代表</string>
     </property>
    </widget>
    <widget class="QTableView" name="tableView">
@@ -35,18 +38,18 @@
      <rect>
       <x>50</x>
       <y>70</y>
-      <width>431</width>
-      <height>501</height>
+      <width>761</width>
+      <height>701</height>
      </rect>
     </property>
    </widget>
    <widget class="QComboBox" name="comboBox">
     <property name="geometry">
      <rect>
-      <x>610</x>
-      <y>290</y>
-      <width>69</width>
-      <height>22</height>
+      <x>920</x>
+      <y>370</y>
+      <width>81</width>
+      <height>31</height>
      </rect>
     </property>
     <item>
@@ -113,11 +116,14 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>520</x>
-      <y>290</y>
+      <x>860</x>
+      <y>380</y>
       <width>54</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 11pt &quot;黑体&quot;;</string>
     </property>
     <property name="text">
      <string>月份</string>
@@ -126,11 +132,14 @@
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>450</y>
-      <width>75</width>
-      <height>23</height>
+      <x>880</x>
+      <y>500</y>
+      <width>121</width>
+      <height>51</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 11pt &quot;黑体&quot;;</string>
     </property>
     <property name="text">
      <string>维修业务表</string>
@@ -139,10 +148,10 @@
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>160</y>
-      <width>75</width>
-      <height>23</height>
+      <x>880</x>
+      <y>240</y>
+      <width>111</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="text">
@@ -152,56 +161,36 @@
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>520</x>
-      <y>50</y>
-      <width>54</width>
-      <height>12</height>
+      <x>860</x>
+      <y>110</y>
+      <width>71</width>
+      <height>31</height>
      </rect>
     </property>
-    <property name="text">
-     <string>水费单价</string>
-    </property>
-   </widget>
-   <widget class="QDoubleSpinBox" name="doubleSpinBox">
-    <property name="geometry">
-     <rect>
-      <x>610</x>
-      <y>50</y>
-      <width>62</width>
-      <height>22</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_4">
-    <property name="geometry">
-     <rect>
-      <x>520</x>
-      <y>100</y>
-      <width>54</width>
-      <height>12</height>
-     </rect>
+    <property name="styleSheet">
+     <string notr="true">font: 11pt &quot;黑体&quot;;</string>
     </property>
     <property name="text">
      <string>电费单价</string>
     </property>
    </widget>
-   <widget class="QDoubleSpinBox" name="doubleSpinBox_2">
+   <widget class="QDoubleSpinBox" name="doubleSpinBox">
     <property name="geometry">
      <rect>
-      <x>610</x>
-      <y>100</y>
-      <width>62</width>
-      <height>22</height>
+      <x>950</x>
+      <y>110</y>
+      <width>71</width>
+      <height>31</height>
      </rect>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_3">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>510</y>
-      <width>75</width>
-      <height>23</height>
+      <x>880</x>
+      <y>610</y>
+      <width>121</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="text">

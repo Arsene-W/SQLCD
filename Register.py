@@ -30,6 +30,8 @@ class RegisterForm(Ui_Dialog,QtWidgets.QDialog):#从自动生成的界面类继�
             type=1
         elif self.radioButton_3.isChecked():
             type=3
+        elif self.radioButton_4.isChecked():
+            type=4
         else:
             type=2
         if type==2 :

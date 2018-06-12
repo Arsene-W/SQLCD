@@ -100,7 +100,7 @@ class AdminForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
 
                 self.cur.execute(sql, (str(text), key))
             except:
-                QMessageBox.critical(self, '错误', '输入有误，主码可能重复0')
+                QMessageBox.critical(self, '错误', '输入有误，主码可能重复')
                 self.model.setItem(item.row(), item.column(), QStandardItem(self.temp))
                 return
         elif item.column()==1:
@@ -109,7 +109,7 @@ class AdminForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
             try:
                 self.cur.execute(sql,(str(item.text()),str(key)))
             except:
-                QMessageBox.critical(self, '错误', '输入有误，主码可能重复1')
+                QMessageBox.critical(self, '错误', '输入有误')
                 self.model.setItem(item.row(), item.column(), QStandardItem(self.temp))
                 return
         elif item.column() == 2:
@@ -118,7 +118,7 @@ class AdminForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
             try:
                 self.cur.execute(sql, (str(item.text()), str(key)))
             except:
-                QMessageBox.critical(self, '错误', '输入有误，主码可能重复2')
+                QMessageBox.critical(self, '错误', '输入有误')
                 self.model.setItem(item.row(), item.column(), QStandardItem(self.temp))
                 return
         elif item.column() == 3:
@@ -127,7 +127,7 @@ class AdminForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
             try:
                 self.cur.execute(sql, (str(item.text()), str(key)))
             except:
-                QMessageBox.critical(self, '错误', '输入有误，主码可能重复3')
+                QMessageBox.critical(self, '错误', '输入有误')
                 self.model.setItem(item.row(), item.column(), QStandardItem(self.temp))
                 return
         self.conn.commit()

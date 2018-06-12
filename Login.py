@@ -7,7 +7,8 @@ from ui_Login import Ui_MainWindow
 from Register import RegisterForm
 from Admin import AdminForm
 from Owner import OwnerForm
-from Representative import RepresentativeForm
+from wRepresentative import wRepresentativeForm
+from eRepresentative import eRepresentativeForm
 
 #数据库服务器信息
 server='DESKTOP-9J11AF2'
@@ -49,9 +50,15 @@ class LoginForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
 
             elif ty[0][0][0]=='3':
                 self.close()
-                self.re=RepresentativeForm()
-                self.re.show()
+                self.wre=wRepresentativeForm()
+                self.wre.show()
                 self.conn.close()
+            elif ty[0][0][0]=='4':
+                self.close()
+                self.ere=eRepresentativeForm()
+                self.ere.show()
+                self.conn.close()
+
 
         else:
             QtWidgets.QMessageBox.warning(self, '错误', '用户名或密码有误，请重新输入')

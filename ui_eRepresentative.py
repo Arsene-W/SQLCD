@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'Representative.ui'
+# Form implementation generated from reading ui file 'eRepresentative.ui'
 #
 # Created by: PyQt5 UI code generator 5.9.2
 #
@@ -11,7 +11,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(726, 612)
+        MainWindow.resize(1057, 818)
+        MainWindow.setStyleSheet("font: 11pt \"黑体\";")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.label = QtWidgets.QLabel(self.centralwidget)
@@ -19,10 +20,10 @@ class Ui_MainWindow(object):
         self.label.setStyleSheet("font: 14pt \"黑体\";")
         self.label.setObjectName("label")
         self.tableView = QtWidgets.QTableView(self.centralwidget)
-        self.tableView.setGeometry(QtCore.QRect(50, 70, 431, 501))
+        self.tableView.setGeometry(QtCore.QRect(50, 70, 761, 701))
         self.tableView.setObjectName("tableView")
         self.comboBox = QtWidgets.QComboBox(self.centralwidget)
-        self.comboBox.setGeometry(QtCore.QRect(610, 290, 69, 22))
+        self.comboBox.setGeometry(QtCore.QRect(920, 370, 81, 31))
         self.comboBox.setObjectName("comboBox")
         self.comboBox.addItem("")
         self.comboBox.addItem("")
@@ -37,28 +38,25 @@ class Ui_MainWindow(object):
         self.comboBox.addItem("")
         self.comboBox.addItem("")
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
-        self.label_2.setGeometry(QtCore.QRect(520, 290, 54, 20))
+        self.label_2.setGeometry(QtCore.QRect(860, 380, 54, 20))
+        self.label_2.setStyleSheet("font: 11pt \"黑体\";")
         self.label_2.setObjectName("label_2")
         self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_2.setGeometry(QtCore.QRect(560, 450, 75, 23))
+        self.pushButton_2.setGeometry(QtCore.QRect(880, 500, 121, 51))
+        self.pushButton_2.setStyleSheet("font: 11pt \"黑体\";")
         self.pushButton_2.setObjectName("pushButton_2")
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(560, 160, 75, 23))
+        self.pushButton.setGeometry(QtCore.QRect(880, 240, 111, 41))
         self.pushButton.setObjectName("pushButton")
         self.label_3 = QtWidgets.QLabel(self.centralwidget)
-        self.label_3.setGeometry(QtCore.QRect(520, 50, 54, 12))
+        self.label_3.setGeometry(QtCore.QRect(860, 110, 71, 31))
+        self.label_3.setStyleSheet("font: 11pt \"黑体\";")
         self.label_3.setObjectName("label_3")
         self.doubleSpinBox = QtWidgets.QDoubleSpinBox(self.centralwidget)
-        self.doubleSpinBox.setGeometry(QtCore.QRect(610, 50, 62, 22))
+        self.doubleSpinBox.setGeometry(QtCore.QRect(950, 110, 71, 31))
         self.doubleSpinBox.setObjectName("doubleSpinBox")
-        self.label_4 = QtWidgets.QLabel(self.centralwidget)
-        self.label_4.setGeometry(QtCore.QRect(520, 100, 54, 12))
-        self.label_4.setObjectName("label_4")
-        self.doubleSpinBox_2 = QtWidgets.QDoubleSpinBox(self.centralwidget)
-        self.doubleSpinBox_2.setGeometry(QtCore.QRect(610, 100, 62, 22))
-        self.doubleSpinBox_2.setObjectName("doubleSpinBox_2")
         self.pushButton_3 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_3.setGeometry(QtCore.QRect(560, 510, 75, 23))
+        self.pushButton_3.setGeometry(QtCore.QRect(880, 610, 121, 51))
         self.pushButton_3.setObjectName("pushButton_3")
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -71,7 +69,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "物业管理系统-物业代表"))
-        self.label.setText(_translate("MainWindow", "普通业主"))
+        self.label.setText(_translate("MainWindow", "电费代表"))
         self.comboBox.setItemText(0, _translate("MainWindow", "1"))
         self.comboBox.setItemText(1, _translate("MainWindow", "2"))
         self.comboBox.setItemText(2, _translate("MainWindow", "3"))
@@ -87,7 +85,6 @@ class Ui_MainWindow(object):
         self.label_2.setText(_translate("MainWindow", "月份"))
         self.pushButton_2.setText(_translate("MainWindow", "维修业务表"))
         self.pushButton.setText(_translate("MainWindow", "添加"))
-        self.label_3.setText(_translate("MainWindow", "水费单价"))
-        self.label_4.setText(_translate("MainWindow", "电费单价"))
+        self.label_3.setText(_translate("MainWindow", "电费单价"))
         self.pushButton_3.setText(_translate("MainWindow", "删除"))
 

@@ -1,5 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-from ui_Representative import Ui_MainWindow
+from ui_eRepresentative import Ui_MainWindow
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 import pymssql
@@ -11,13 +11,13 @@ user="representative"
 password="123456789"
 database="SQLCD"
 
-charges_title=['业主号','用水量','水费','用电量','电费','物业费','维修费']
+charges_title=['业主号','用电量','电费','物业费','维修费']
 serviceif_title=['月份','服务号','服务名','业主号','费用','服务人员','状态']
 
-class RepresentativeForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面类继承
+class eRepresentativeForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面类继承
 
     def __init__(self,parent = None):
-        super(RepresentativeForm, self).__init__()
+        super(eRepresentativeForm, self).__init__()
         self.setupUi(self)
 
         self.conn = pymssql.connect(server, user, password, database, charset="utf8")
@@ -45,7 +45,7 @@ class RepresentativeForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成�
         self.model.clear()
         self.model = QStandardItemModel(0, len(charges_title));
         self.model.setHorizontalHeaderLabels(charges_title)
-        sql = "SELECT owner_num,water_yield,water_charges,electricity_yield,electricity_charges,property_fee,repair_cost FROM charges WHERE month=%s"
+        sql = "SELECT owner_num,electricity_yield,electricity_charges,property_fee,repair_cost FROM charges WHERE month=%s"
         self.cur.execute(sql, self.comboBox.currentText())
         rows = self.cur.fetchall()
         self.addItem(rows, charges_title)
@@ -114,7 +114,7 @@ class RepresentativeForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成�
                     self.model.setItem(item.row(), item.column(), QStandardItem(self.temp))
                     return
             elif item.column()==1:
-                sql = "UPDATE charges SET water_yield=%s ,water_charges=%s WHERE month=%s AND owner_num=%s"
+                sql = "UPDATE charges SET electricity_yield=%s ,electricity_charges=%s WHERE month=%s AND owner_num=%s"
                 try:
                     print(str(item.text()),str(float(item.text())*float(self.doubleSpinBox.text())),str(self.comboBox.currentText()),str(key))
                     self.cur.execute(sql,(str(item.text()),str(float(item.text())*float(self.doubleSpinBox.text())),str(self.comboBox.currentText()),str(key)))
@@ -124,18 +124,9 @@ class RepresentativeForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成�
                     self.model.setItem(item.row(), item.column(), QStandardItem(self.temp))
                     return
 
-            elif item.column()==3:
-                sql = "UPDATE charges SET electricity_yield=%s ,electricity_charges=%s WHERE month=%s AND owner_num=%s"
-                try:
-                    print(str(item.text()),str(float(item.text())*float(self.doubleSpinBox_2.text())),str(self.comboBox.currentText()),str(key))
-                    self.cur.execute(sql,(str(item.text()),str(float(item.text())*float(self.doubleSpinBox.text())),str(self.comboBox.currentText()),str(key)))
-                    self.model.setItem(item.row(),4,QStandardItem(str(float(item.text())*float(self.doubleSpinBox_2.text()))))
-                except:
-                    QMessageBox.critical(self, '错误', '输入有误，主码可能重复')
-                    self.model.setItem(item.row(), item.column(), QStandardItem(self.temp))
-                    return
 
-            elif item.column()==5:
+
+            elif item.column()==3:
                 sql = "UPDATE charges SET property_fee=%s WHERE owner_num=%s"
                 try:
                     self.cur.execute(sql, (str(item.text()), key))
@@ -237,6 +228,4 @@ class RepresentativeForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成�
             self.cur.execute(sql,(key[0],key[1],key[2]))
             self.conn.commit()
             self.model.removeRows(index.row(), 1)
-
-
 
