@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>物业管理系统-物业代表</string>
+   <string>物业管理系统-电费代表</string>
   </property>
   <property name="styleSheet">
    <string notr="true">font: 11pt &quot;黑体&quot;;</string>

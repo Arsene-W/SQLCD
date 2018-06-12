@@ -68,8 +68,8 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "物业管理系统-物业代表"))
-        self.label.setText(_translate("MainWindow", "普通业主"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "物业管理系统-水费代表"))
+        self.label.setText(_translate("MainWindow", "水费业主"))
         self.comboBox.setItemText(0, _translate("MainWindow", "1"))
         self.comboBox.setItemText(1, _translate("MainWindow", "2"))
         self.comboBox.setItemText(2, _translate("MainWindow", "3"))

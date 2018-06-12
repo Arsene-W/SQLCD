@@ -30,9 +30,13 @@ class OwnerForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
         for i in range(len(ser)):
             self.comboBox.addItem(ser[i][0])
         self.pushButton.clicked.connect(self.showper)
+        self.pushButton.clicked.connect(self.p5unable)
         self.pushButton_2.clicked.connect(self.addSer)
         self.pushButton_3.clicked.connect(self.showserif)
+        self.pushButton_3.clicked.connect(self.p5enable)
         self.pushButton_4.clicked.connect(self.showcha)
+        self.pushButton_4.clicked.connect(self.p5unable)
+        self.pushButton_5.clicked.connect(self.delete)
         self.tableView.doubleClicked.connect(self.gettemp)
         self.tableView.doubleClicked.connect(self.tableView.edit)
 
@@ -40,6 +44,7 @@ class OwnerForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
 
     def init(self):
         self.model = QStandardItemModel(0, len(own_title));
+        self.p5unable()
         self.showper()
 
 
@@ -143,31 +148,58 @@ class OwnerForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
     def cor(self,item):
         key = [self.model.item(item.row(), 0).text(), self.model.item(item.row(), 1).text(),self.model.item(item.row(), 3).text()]
         if item.column()==6:
-            sql = "UPDATE service_if SET situation=%s WHERE month=%s AND service_num=%s AND owner_num=%s"
-            try:
-                self.cur.execute(sql, (str(item.text()), key[0], key[1], key[2]))
-                if item.text().replace(' ', '') == "完成":
-                    print("!")
-                    sql = "SELECT repair_cost FROM charges WHERE month=%s AND owner_num=%s"
-                    self.cur.execute(sql, (key[0], key[2]))
-                    rows = self.cur.fetchall()
-                    print("$")
+            print(self.model.item(item.row(),3).text(),self.my_num)
+            if self.model.item(item.row(),3).text()==self.my_num:
+                sql = "UPDATE service_if SET situation=%s WHERE month=%s AND service_num=%s AND owner_num=%s"
+                try:
+                    self.cur.execute(sql, (str(item.text()), key[0], key[1], key[2]))
+                    if item.text().replace(' ', '') == "完成":
+                        print("!")
+                        sql = "SELECT repair_cost FROM charges WHERE month=%s AND owner_num=%s"
+                        self.cur.execute(sql, (key[0], key[2]))
+                        rows = self.cur.fetchall()
+                        print("$")
+                        print(rows)
+                        if rows[0][0] != None:
+                            sql = "UPDATE charges SET repair_cost=%s WHERE month=%s AND owner_num=%s"
+                            self.cur.execute(sql, (
+                            float(rows[0][0]) + float(self.model.item(item.row(), 4).text()), key[0], key[2]))
+                        else:
+                            print("@")
+                            sql = "UPDATE charges SET repair_cost=%s WHERE month=%s AND owner_num=%s"
+                            print(self.model.item(item.row(), 4).text(), key[0], key[2])
+                            self.cur.execute(sql, (self.model.item(item.row(), 4).text(), key[0], key[2]))
+                except:
+                    QMessageBox.critical(self, '错误', '账单可能还未生成')
+                    self.model.setItem(item.row(), item.column(), QStandardItem(self.temp))
+                    return
+                self.conn.commit()
+            else:
+                QMessageBox.warning(self,'错误','您无权修改他人的状态')
 
-                    if rows[0][0] != None:
-                        sql = "UPDATE charges SET repair_cost=%s WHERE month=%s AND owner_num=%s"
-                        self.cur.execute(sql, (
-                        float(rows[0][0]) + float(self.model.item(item.row(), 4).text()), key[0], key[2]))
-                    else:
-                        print("@")
-                        sql = "UPDATE charges SET repair_cost=%s WHERE month=%s AND owner_num=%s"
-                        print(self.model.item(item.row(), 4).text(), key[0], key[2])
-                        self.cur.execute(sql, (self.model.item(item.row(), 4).text(), key[0], key[2]))
-            except:
-                QMessageBox.critical(self, '错误', '账单可能还未生成')
-                self.model.setItem(item.row(), item.column(), QStandardItem(self.temp))
+    def delete(self):
+
+        indexs = self.tableView.selectionModel().selection().indexes()
+        if len(indexs) > 0:
+            index = indexs[0]
+            if self.model.item(index.row(), 3).text()==self.my_num:
+                key = [self.model.item(index.row(), 0).text(),self.model.item(index.row(), 1).text(),self.model.item(index.row(), 3).text()]
+                sql = "DELETE FROM service_if WHERE month=%s AND service_num=%s AND owner_num=%s"
+                self.cur.execute(sql,(key[0],key[1],key[2]))
+                self.conn.commit()
+                self.model.removeRows(index.row(), 1)
+            else:
+                QMessageBox.warning(self,'错误','没有权限')
+                self.num = self.model.rowCount()
                 return
-            self.conn.commit()
+        self.num = self.model.rowCount()
 
+
+    def p5enable(self):
+        self.pushButton_5.setEnabled(True)
+
+    def p5unable(self):
+        self.pushButton_5.setEnabled(False)
 
 
 
