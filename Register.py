@@ -1,6 +1,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 from ui_Register import Ui_Dialog
+import sys
 
 class RegisterForm(Ui_Dialog,QtWidgets.QDialog):#从自动生成的界面类继承
 
@@ -13,9 +14,16 @@ class RegisterForm(Ui_Dialog,QtWidgets.QDialog):#从自动生成的界面类继�
         self.cur=None
 
         self.pushButton.clicked.connect(self.register)
+        self.pushButton_2.clicked.connect(self.close)
         self.radioButton_2.clicked.connect(self.enlineEdit_3)
         self.radioButton.clicked.connect(self.unlineEdit_3)
         self.radioButton_3.clicked.connect(self.unlineEdit_3)
+
+        qss_file = open('image/black.css').read()
+        self.setStyleSheet(qss_file)
+        window_pale = QtGui.QPalette()
+        window_pale.setBrush(self.backgroundRole(), QtGui.QBrush(QtGui.QPixmap("image/background.jpg")))
+        self.setPalette(window_pale)
 
 #控制业主框是否可编辑
     def enlineEdit_3(self,check):

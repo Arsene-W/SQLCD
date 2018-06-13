@@ -10,6 +10,12 @@
     <height>217</height>
    </rect>
   </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
   <property name="windowTitle">
    <string>登   录</string>
   </property>
@@ -36,9 +42,12 @@ font: 14pt &quot;黑体&quot;;</string>
      <rect>
       <x>60</x>
       <y>80</y>
-      <width>54</width>
-      <height>12</height>
+      <width>51</width>
+      <height>16</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 10pt &quot;微软雅黑&quot;;</string>
     </property>
     <property name="text">
      <string>账号</string>
@@ -49,9 +58,12 @@ font: 14pt &quot;黑体&quot;;</string>
      <rect>
       <x>60</x>
       <y>130</y>
-      <width>54</width>
-      <height>12</height>
+      <width>51</width>
+      <height>16</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 10pt &quot;微软雅黑&quot;;</string>
     </property>
     <property name="text">
      <string>密码</string>
@@ -90,7 +102,7 @@ font: 14pt &quot;黑体&quot;;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+     <string notr="true">font: 10pt &quot;微软雅黑&quot;;</string>
     </property>
     <property name="text">
      <string>登  录</string>
@@ -106,7 +118,7 @@ font: 14pt &quot;黑体&quot;;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+     <string notr="true">font: 10pt &quot;微软雅黑&quot;;</string>
     </property>
     <property name="text">
      <string>注册</string>
@@ -122,6 +134,8 @@ font: 14pt &quot;黑体&quot;;</string>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="../QUI/rc.qrc"/>
+ </resources>
  <connections/>
 </ui>

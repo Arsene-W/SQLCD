@@ -41,6 +41,11 @@ class OwnerForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
         self.tableView.doubleClicked.connect(self.tableView.edit)
 
         self.tablenum=0
+        qss_file = open('image/black.css').read()
+        self.setStyleSheet(qss_file)
+        window_pale = QtGui.QPalette()
+        window_pale.setBrush(self.backgroundRole(), QtGui.QBrush(QtGui.QPixmap("image/background.jpg")))
+        self.setPalette(window_pale)
 
     def init(self):
         self.model = QStandardItemModel(0, len(own_title));

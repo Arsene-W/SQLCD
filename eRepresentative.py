@@ -3,6 +3,7 @@ from ui_eRepresentative import Ui_MainWindow
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 import pymssql
+import datetime
 
 import sys
 
@@ -31,11 +32,16 @@ class eRepresentativeForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成�
         self.tableView.doubleClicked.connect(self.gettemp)
         self.tableView.doubleClicked.connect(self.tableView.edit)
 
+        self.comboBox.setCurrentIndex(datetime.datetime.now().month - 1)
         self.comboBox.currentTextChanged.connect(self.showcha)
 
         self.tablenum=0
 
-
+        qss_file = open('image/black.css').read()
+        self.setStyleSheet(qss_file)
+        window_pale = QtGui.QPalette()
+        window_pale.setBrush(self.backgroundRole(), QtGui.QBrush(QtGui.QPixmap("image/background.jpg")))
+        self.setPalette(window_pale)
 
     def init(self):
         self.model = QStandardItemModel(0, len(charges_title))

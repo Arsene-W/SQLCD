@@ -32,11 +32,13 @@ class AdminForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
         #self.tableView.doubleClicked.connect(self.tableView.edit)
         self.model.itemChanged.connect(self.addorcor)
 
+        qss_file = open('image/black.css').read()
+        self.setStyleSheet(qss_file)
+        window_pale = QtGui.QPalette()
+        window_pale.setBrush(self.backgroundRole(), QtGui.QBrush(QtGui.QPixmap("image/background.jpg")))
+        self.setPalette(window_pale)
 
-
-
-
-#初始化界面
+    #初始化界面
     def init(self):
         self.model = QStandardItemModel(0, len(title));
         self.model.setHorizontalHeaderLabels(title)
@@ -156,9 +158,13 @@ class AdminForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
             index = indexs[0]
             key = self.model.item(index.row(), 0).text()
             sql = "DELETE FROM owner WHERE owner_num=%s"
-            self.cur.execute(sql,key)
-            self.conn.commit()
-            self.model.removeRows(index.row(), 1)
+            try:
+                self.cur.execute(sql,key)
+                self.conn.commit()
+                self.model.removeRows(index.row(), 1)
+            except:
+                QMessageBox.critical(self,'错误','该业主号已被注册，无法删除')
+
         self.num = self.model.rowCount()
 
 #搜索于业主

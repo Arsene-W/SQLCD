@@ -35,6 +35,9 @@
      <height>16</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">font: 10pt &quot;微软雅黑&quot;;</string>
+   </property>
    <property name="text">
     <string>水费代表</string>
    </property>
@@ -47,6 +50,9 @@
      <width>89</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 10pt &quot;微软雅黑&quot;;</string>
    </property>
    <property name="text">
     <string>管理员</string>
@@ -87,6 +93,9 @@
      <height>16</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">font: 10pt &quot;微软雅黑&quot;;</string>
+   </property>
    <property name="text">
     <string>业主</string>
    </property>
@@ -97,11 +106,14 @@
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>310</y>
+     <x>100</x>
+     <y>300</y>
      <width>75</width>
      <height>23</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 10pt &quot;微软雅黑&quot;;</string>
    </property>
    <property name="text">
     <string>注册</string>
@@ -112,9 +124,12 @@
     <rect>
      <x>100</x>
      <y>130</y>
-     <width>54</width>
-     <height>12</height>
+     <width>51</width>
+     <height>16</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 10pt &quot;微软雅黑&quot;;</string>
    </property>
    <property name="text">
     <string>账号</string>
@@ -125,9 +140,12 @@
     <rect>
      <x>100</x>
      <y>190</y>
-     <width>54</width>
-     <height>12</height>
+     <width>51</width>
+     <height>16</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 10pt &quot;微软雅黑&quot;;</string>
    </property>
    <property name="text">
     <string>密码</string>
@@ -138,9 +156,12 @@
     <rect>
      <x>100</x>
      <y>250</y>
-     <width>54</width>
-     <height>12</height>
+     <width>51</width>
+     <height>16</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 10pt &quot;微软雅黑&quot;;</string>
    </property>
    <property name="text">
     <string>业主号</string>
@@ -168,8 +189,27 @@
      <height>16</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">font: 10pt &quot;微软雅黑&quot;;</string>
+   </property>
    <property name="text">
     <string>电费代表</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>300</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 10pt &quot;微软雅黑&quot;;</string>
+   </property>
+   <property name="text">
+    <string>取消</string>
    </property>
   </widget>
  </widget>
