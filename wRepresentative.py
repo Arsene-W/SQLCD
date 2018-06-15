@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding:utf-8 -*-
 from PyQt5 import QtCore, QtGui, QtWidgets
 from ui_wRepresentative import Ui_MainWindow
 from PyQt5.QtWidgets import *
@@ -12,7 +14,7 @@ user="representative"
 password="123456789"
 database="SQLCD"
 
-charges_title=['业主号','用水量','水费','物业费','维修费']
+charges_title=['业主号','之前用水量','目前用水量','用水量','水费','物业费','维修费']
 serviceif_title=['月份','服务号','服务名','业主号','费用','服务人员','状态']
 
 class wRepresentativeForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面类继承
@@ -24,7 +26,7 @@ class wRepresentativeForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成�
         self.conn = pymssql.connect(server, user, password, database, charset="utf8")
         self.cur = self.conn.cursor()
 
-
+        self.comboBox.setCurrentIndex(datetime.datetime.now().month - 1)
         self.init()
         self.pushButton.clicked.connect(self.addRow)
         self.pushButton_2.clicked.connect(self.showserif)
@@ -32,16 +34,12 @@ class wRepresentativeForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成�
         self.tableView.doubleClicked.connect(self.gettemp)
         self.tableView.doubleClicked.connect(self.tableView.edit)
 
-        self.comboBox.setCurrentIndex(datetime.datetime.now().month-1)
+
         self.comboBox.currentTextChanged.connect(self.showcha)
 
 
         self.tablenum=0
-        qss_file = open('image/black.css').read()
-        self.setStyleSheet(qss_file)
-        window_pale = QtGui.QPalette()
-        window_pale.setBrush(self.backgroundRole(), QtGui.QBrush(QtGui.QPixmap("image/background.jpg")))
-        self.setPalette(window_pale)
+
 
     def init(self):
         self.model = QStandardItemModel(0, len(charges_title))
@@ -52,7 +50,7 @@ class wRepresentativeForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成�
         self.model.clear()
         self.model = QStandardItemModel(0, len(charges_title));
         self.model.setHorizontalHeaderLabels(charges_title)
-        sql = "SELECT owner_num,water_yield,water_charges,property_fee,repair_cost FROM charges WHERE month=%s"
+        sql = "SELECT owner_num,last_water,now_water,water_yield,water_charges,property_fee,repair_cost FROM charges WHERE month=%s"
         self.cur.execute(sql, self.comboBox.currentText())
         rows = self.cur.fetchall()
         self.addItem(rows, charges_title)
@@ -69,6 +67,8 @@ class wRepresentativeForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成�
         self.tablenum=0
         self.pushButton_3.setEnabled(False)
         self.pushButton.setEnabled(True)
+
+
 
 #添加表项
     def addItem(self, rows,title):
@@ -92,6 +92,7 @@ class wRepresentativeForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成�
         if self.tablenum==0:
             #print(self.num)
             if item.row()>=self.num:
+
                 self.num = self.num + 1
                 sql="INSERT INTO charges(month,owner_num) VALUES (%s,%s)"
                 try:
@@ -123,12 +124,12 @@ class wRepresentativeForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成�
                     QMessageBox.critical(self, '错误', '输入有误，主码可能重复0')
                     self.model.setItem(item.row(), item.column(), QStandardItem(self.temp))
                     return
-            elif item.column()==1:
+            elif item.column()==3:
                 sql = "UPDATE charges SET water_yield=%s ,water_charges=%s WHERE month=%s AND owner_num=%s"
                 try:
                     print(str(item.text()),str(float(item.text())*float(self.doubleSpinBox.text())),str(self.comboBox.currentText()),str(key))
                     self.cur.execute(sql,(str(item.text()),str(float(item.text())*float(self.doubleSpinBox.text())),str(self.comboBox.currentText()),str(key)))
-                    self.model.setItem(item.row(),2,QStandardItem(str(float(item.text())*float(self.doubleSpinBox.text()))))
+                    self.model.setItem(item.row(),4,QStandardItem(str(float(item.text())*float(self.doubleSpinBox.text()))))
                 except:
                     QMessageBox.critical(self, '错误', '输入有误，主码可能重复')
                     self.model.setItem(item.row(), item.column(), QStandardItem(self.temp))
@@ -136,7 +137,7 @@ class wRepresentativeForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成�
 
 
 
-            elif item.column()==3:
+            elif item.column()==5:
                 sql = "UPDATE charges SET property_fee=%s WHERE owner_num=%s"
                 try:
                     self.cur.execute(sql, (str(item.text()), key))
@@ -144,6 +145,27 @@ class wRepresentativeForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成�
                     QMessageBox.critical(self, '错误', '输入有误，主码可能重复')
                     self.model.setItem(item.row(), item.column(), QStandardItem(self.temp))
                     return
+
+            elif item.column() == 2:
+                sql = "UPDATE charges SET now_water=%s WHERE month=%s AND owner_num=%s"
+                try:
+
+                    self.cur.execute(sql, (str(item.text()),str(self.comboBox.currentText()), str(key)))
+                    print(float(text)-float(self.model.item(item.row(), 1).text()))
+                    self.model.setItem(item.row(), 3,QStandardItem(str(float(text)-float(self.model.item(item.row(), 1).text()))))
+                except:
+                    QMessageBox.critical(self, '错误', '输入有误，主码可能重复#')
+                    self.model.setItem(item.row(), item.column(), QStandardItem(self.temp))
+                    return
+            elif item.column() == 1:
+                sql = "UPDATE charges SET last_water=%s WHERE owner_num=%s"
+                try:
+                    self.cur.execute(sql, (str(item.text()), key))
+                except:
+                    QMessageBox.critical(self, '错误', '输入有误，主码可能重复')
+                    self.model.setItem(item.row(), item.column(), QStandardItem(self.temp))
+                    return
+
 
 
 

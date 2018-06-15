@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding:utf-8 -*-
 from PyQt5 import QtCore, QtGui, QtWidgets
 from ui_eRepresentative import Ui_MainWindow
 from PyQt5.QtWidgets import *
@@ -12,7 +14,7 @@ user="representative"
 password="123456789"
 database="SQLCD"
 
-charges_title=['业主号','用电量','电费','物业费','维修费']
+charges_title=['业主号','之前用水量','目前用水量','用水量','水费','物业费','维修费']
 serviceif_title=['月份','服务号','服务名','业主号','费用','服务人员','状态']
 
 class eRepresentativeForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面类继承
@@ -37,11 +39,7 @@ class eRepresentativeForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成�
 
         self.tablenum=0
 
-        qss_file = open('image/black.css').read()
-        self.setStyleSheet(qss_file)
-        window_pale = QtGui.QPalette()
-        window_pale.setBrush(self.backgroundRole(), QtGui.QBrush(QtGui.QPixmap("image/background.jpg")))
-        self.setPalette(window_pale)
+
 
     def init(self):
         self.model = QStandardItemModel(0, len(charges_title))
@@ -52,7 +50,7 @@ class eRepresentativeForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成�
         self.model.clear()
         self.model = QStandardItemModel(0, len(charges_title));
         self.model.setHorizontalHeaderLabels(charges_title)
-        sql = "SELECT owner_num,electricity_yield,electricity_charges,property_fee,repair_cost FROM charges WHERE month=%s"
+        sql = "SELECT owner_num,last_ele,now_ele,electricity_yield,electricity_charges,property_fee,repair_cost FROM charges WHERE month=%s"
         self.cur.execute(sql, self.comboBox.currentText())
         rows = self.cur.fetchall()
         self.addItem(rows, charges_title)
@@ -167,7 +165,26 @@ class eRepresentativeForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成�
                     QMessageBox.critical(self, '错误', '输入有误，主码可能重复')
                     self.model.setItem(item.row(), item.column(), QStandardItem(self.temp))
                     return
+            elif item.column() == 2:
+                sql = "UPDATE charges SET now_ele=%s WHERE month=%s AND owner_num=%s"
+                try:
 
+                    self.cur.execute(sql, (str(item.text()), str(self.comboBox.currentText()), str(key)))
+                    print(float(text) - float(self.model.item(item.row(), 1).text()))
+                    self.model.setItem(item.row(), 3,
+                                       QStandardItem(str(float(text) - float(self.model.item(item.row(), 1).text()))))
+                except:
+                    QMessageBox.critical(self, '错误', '输入有误，主码可能重复#')
+                    self.model.setItem(item.row(), item.column(), QStandardItem(self.temp))
+                    return
+            elif item.column() == 1:
+                sql = "UPDATE charges SET last_ele=%s WHERE owner_num=%s"
+                try:
+                    self.cur.execute(sql, (str(item.text()), key))
+                except:
+                    QMessageBox.critical(self, '错误', '输入有误，主码可能重复')
+                    self.model.setItem(item.row(), item.column(), QStandardItem(self.temp))
+                    return
 
             self.conn.commit()
 

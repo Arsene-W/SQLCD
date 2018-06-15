@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding:utf-8 -*-
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 from ui_Register import Ui_Dialog
@@ -18,12 +20,9 @@ class RegisterForm(Ui_Dialog,QtWidgets.QDialog):#从自动生成的界面类继�
         self.radioButton_2.clicked.connect(self.enlineEdit_3)
         self.radioButton.clicked.connect(self.unlineEdit_3)
         self.radioButton_3.clicked.connect(self.unlineEdit_3)
+        self.radioButton_4.clicked.connect(self.unlineEdit_3)
 
-        qss_file = open('image/black.css').read()
-        self.setStyleSheet(qss_file)
-        window_pale = QtGui.QPalette()
-        window_pale.setBrush(self.backgroundRole(), QtGui.QBrush(QtGui.QPixmap("image/background.jpg")))
-        self.setPalette(window_pale)
+
 
 #控制业主框是否可编辑
     def enlineEdit_3(self,check):
@@ -35,6 +34,9 @@ class RegisterForm(Ui_Dialog,QtWidgets.QDialog):#从自动生成的界面类继�
 
 #注册
     def register(self):
+        if len(self.lineEdit_2.text())<6:
+                QtWidgets.QMessageBox.warning(self,'错误','密码过短')
+                return
         if self.radioButton.isChecked():
             type=1
         elif self.radioButton_3.isChecked():
@@ -48,6 +50,8 @@ class RegisterForm(Ui_Dialog,QtWidgets.QDialog):#从自动生成的界面类继�
             self.cur.execute(sql,self.lineEdit_3.text())
             tf = self.cur.fetchall()
             # if len(tf)>0:
+
+
             sql="INSERT INTO accounts VALUES(%s,%s,%s,%s) "
             try:
                 self.cur.execute(sql,(self.lineEdit.text(),self.lineEdit_2.text(),type,self.lineEdit_3.text()))

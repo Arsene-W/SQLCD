@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding:utf-8 -*-
 from PyQt5 import QtCore, QtGui, QtWidgets
 from ui_Admin import Ui_MainWindow
 from PyQt5.QtWidgets import *
@@ -32,11 +34,7 @@ class AdminForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
         #self.tableView.doubleClicked.connect(self.tableView.edit)
         self.model.itemChanged.connect(self.addorcor)
 
-        qss_file = open('image/black.css').read()
-        self.setStyleSheet(qss_file)
-        window_pale = QtGui.QPalette()
-        window_pale.setBrush(self.backgroundRole(), QtGui.QBrush(QtGui.QPixmap("image/background.jpg")))
-        self.setPalette(window_pale)
+
 
     #初始化界面
     def init(self):
@@ -74,7 +72,7 @@ class AdminForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
             self.num = self.num + 1
             sql="INSERT INTO owner(owner_num) VALUES (%s)"
             try:
-                self.cur.execute(sql,"待填")
+                self.cur.execute(sql,"temp")
                 self.conn.commit()
 
             except:
@@ -91,9 +89,9 @@ class AdminForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
                 if self.temp!=None:
                     key=self.temp
                 else:
-                    key="待填"
+                    key="temp"
         else:
-            key="待填"
+            key="temp"
 
 
         if item.column()==0:

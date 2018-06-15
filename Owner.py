@@ -1,10 +1,14 @@
+#!/usr/bin/env python
+# -*- coding:utf-8 -*-
 from PyQt5 import QtCore, QtGui, QtWidgets
 from ui_Owner import Ui_MainWindow
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 import pymssql
 import datetime
-
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
 server='DESKTOP-9J11AF2'
 user="owner"
 password="123456"
@@ -41,11 +45,9 @@ class OwnerForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
         self.tableView.doubleClicked.connect(self.tableView.edit)
 
         self.tablenum=0
-        qss_file = open('image/black.css').read()
-        self.setStyleSheet(qss_file)
-        window_pale = QtGui.QPalette()
-        window_pale.setBrush(self.backgroundRole(), QtGui.QBrush(QtGui.QPixmap("image/background.jpg")))
-        self.setPalette(window_pale)
+        # qss_file = open('image/black.css').read()
+        # self.setStyleSheet(qss_file)
+
 
     def init(self):
         self.model = QStandardItemModel(0, len(own_title));
@@ -80,6 +82,7 @@ class OwnerForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
         sql="SELECT * FROM service_if"
         self.cur.execute(sql)
         rows = self.cur.fetchall()
+        print(rows)
         self.addItem(rows, serif_title)
         self.tableView.setModel(self.model)
         self.tableView.setEditTriggers(QTableView.NoEditTriggers)
@@ -115,7 +118,7 @@ class OwnerForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
     def addItem(self, rows,title):
         row = len(rows)
         col = len(title)
-        print(col)
+
         for i in range(row):
             date = []
             for j in range(col):
@@ -128,7 +131,7 @@ class OwnerForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
         sql="SELECT service_name FROM service"
         self.cur.execute(sql)
         rows = self.cur.fetchall()
-        print(rows)
+
         return rows
 
 #添加服务
@@ -139,7 +142,7 @@ class OwnerForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
             rows = self.cur.fetchall()
             sql = "INSERT INTO service_if(month,service_num,service_name,owner_num,situation) VALUES (%s,%s,%s,%s,%s)"
 
-            self.cur.execute(sql, (datetime.datetime.now().month,rows[0][0],self.comboBox.currentText(),self.my_num,"未完成"))
+            self.cur.execute(sql, (datetime.datetime.now().month,rows[0][0],self.comboBox.currentText(),self.my_num,"未完成".decode('utf8')))
             self.conn.commit()
             QMessageBox.information(self,"提示","服务添加成功")
         except:
@@ -153,15 +156,15 @@ class OwnerForm(Ui_MainWindow,QtWidgets.QMainWindow):#从自动生成的界面�
     def cor(self,item):
         key = [self.model.item(item.row(), 0).text(), self.model.item(item.row(), 1).text(),self.model.item(item.row(), 3).text()]
         if item.column()==6:
-            print(self.model.item(item.row(),3).text(),self.my_num)
+
             if self.model.item(item.row(),3).text()==self.my_num:
                 sql = "UPDATE service_if SET situation=%s WHERE month=%s AND service_num=%s AND owner_num=%s"
                 try:
-                    self.cur.execute(sql, (str(item.text()), key[0], key[1], key[2]))
+                    self.cur.execute(sql, (str(item.text()), key[0], key[1].decode('utf8'), key[2]))
                     if item.text().replace(' ', '') == "完成":
                         print("!")
                         sql = "SELECT repair_cost FROM charges WHERE month=%s AND owner_num=%s"
-                        self.cur.execute(sql, (key[0], key[2]))
+                        self.cur.execute(sql, (key[0], key[2].decode('utf8')))
                         rows = self.cur.fetchall()
                         print("$")
                         print(rows)
